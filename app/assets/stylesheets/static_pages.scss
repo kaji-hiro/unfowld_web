@@ -1,0 +1,30 @@
+// Place all the styles related to the StaticPages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.contents{
+  &-home{
+    background-image: image-url('DSC_0350.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    margin-top: -22px;
+
+    &-links{
+      font-size: 20px;
+    }
+  }
+
+  &-about{
+    margin: 20px;
+
+    &-text{
+      font-size: 15px;
+    }
+  }
+
+  &-contact{
+    margin: 20px;
+    font-size: 15px;
+  }
+}
