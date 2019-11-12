@@ -12,3 +12,6 @@ Style/Documentation:
 
 Metrics/BlockLength:
   Max: 50
+
+Layout/IndentationConsistency:
+  EnforcedStyle: indented_internal_methods
