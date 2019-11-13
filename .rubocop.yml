@@ -1,0 +1,25 @@
+AllCops:
+  Exclude:
+    - 'vendor/**/*'
+    - 'db/schema.rb'
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Layout/AlignHash:
+  EnforcedHashRocketStyle: table
+
+Metrics/LineLength:
+  Max: 120
+
+Style/Documentation:
+  Enabled: false
+
+Metrics/BlockLength:
+  Max: 50
+
+Layout/IndentationConsistency:
+  EnforcedStyle: indented_internal_methods
+
+Style/AsciiComments:
+  Enabled: false

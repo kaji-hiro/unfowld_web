@@ -6,7 +6,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.0.0'
+gem 'rails', '~> 6'
 # Use postgresql as the database for Active Record
 # gem 'mysql2', '>= 0.4.4'
 # Use Puma as the app server
@@ -30,7 +30,7 @@ gem 'kaminari', '~> 1.1'
 # Search Gem
 gem 'ransack', '~> 2.3'
 # Show Schema
-gem 'annotate_models', '~> 1.0'
+gem 'annotate', '~> 3.0'
 # Show Error Message better
 gem 'better_errors', '~> 2.5'
 # Can Use irb at Error
@@ -45,6 +45,8 @@ gem 'rails_best_practices', '~> 1.19'
 gem 'awesome_print', '~> 2.0.0.pre2'
 # Show Server Time
 gem 'rack-mini-profiler', '~> 1.1'
+# Create local database.yml
+gem 'config', '~> 2.0'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
