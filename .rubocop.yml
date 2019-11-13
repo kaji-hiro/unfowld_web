@@ -1,3 +1,8 @@
+AllCops:
+  Exclude:
+    - 'vendor/**/*'
+    - 'db/schema.rb'
+
 Style/FrozenStringLiteralComment:
   Enabled: false
 
