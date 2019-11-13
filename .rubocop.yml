@@ -20,3 +20,6 @@ Metrics/BlockLength:
 
 Layout/IndentationConsistency:
   EnforcedStyle: indented_internal_methods
+
+Style/AsciiComments:
+  Enabled: false
