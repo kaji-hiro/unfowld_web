@@ -1,0 +1,12 @@
+<div class='contents'>
+  <h1 class='contents-title'>メンバー紹介</h1>
+  <div class='contents-members'>
+    <% members.each do |member| %>
+      <div class='contents-members-item'>
+        <p class='contents-members-item-name'><%= member[:name] %></p>
+        <p class='contents-members-item-position'><%= member[:position] ||= ' ' %></p>
+        <p class='contents-members-item-introduction'><%= member[:introduction] %></p>
+      </div>
+    <% end %>
+  </div>
+</div>
