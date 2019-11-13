@@ -57,8 +57,8 @@ jobs:
 
       # rubocop settings
       - run:
-        name: install rubocop
-        command: gem install rubocop
+          name: install rubocop
+          command: gem install rubocop
 
       - run: rubocop
 
