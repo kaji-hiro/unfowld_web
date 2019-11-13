@@ -72,5 +72,6 @@ yarn-debug.log*
 
 # End of https://www.gitignore.io/api/rails
 
-# Ignore mysql username and password
-/config/database.yml
+config/settings.local.yml
+config/settings/*.local.yml
+config/environments/*.local.yml

@@ -45,6 +45,8 @@ gem 'rails_best_practices', '~> 1.19'
 gem 'awesome_print', '~> 2.0.0.pre2'
 # Show Server Time
 gem 'rack-mini-profiler', '~> 1.1'
+# Create local database.yml
+gem 'config', '~> 2.0'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
