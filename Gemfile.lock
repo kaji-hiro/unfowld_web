@@ -139,6 +139,8 @@ GEM
     erubis (2.7.0)
     execjs (2.7.0)
     ffi (1.11.2)
+    font-awesome-sass (5.11.2)
+      sassc (>= 1.11)
     foreman (0.86.0)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
@@ -146,6 +148,8 @@ GEM
       concurrent-ruby (~> 1.0)
     jbuilder (2.9.1)
       activesupport (>= 4.2.0)
+    jpmobile (6.0.0)
+      mail (~> 2.7.0)
     json (2.2.0)
     kaminari (1.1.1)
       activesupport (>= 4.1.0)
@@ -307,8 +311,10 @@ DEPENDENCIES
   capybara (>= 2.15)
   coffee-rails
   config (~> 2.0)
+  font-awesome-sass (~> 5.11)
   foreman
   jbuilder (~> 2.7)
+  jpmobile (~> 6.0)
   kaminari (~> 1.1)
   listen (>= 3.0.5, < 3.2)
   mysql2 (>= 0.4.4)
