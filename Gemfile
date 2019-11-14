@@ -47,6 +47,10 @@ gem 'awesome_print', '~> 2.0.0.pre2'
 gem 'rack-mini-profiler', '~> 1.1'
 # Create local database.yml
 gem 'config', '~> 2.0'
+# Support SP
+gem 'jpmobile', '~> 6.0'
+# Activate font-awesome
+gem 'font-awesome-sass', '~> 5.11'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
