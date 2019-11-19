@@ -16,6 +16,11 @@ class UsersController < ApplicationController
 
   def update; end
 
+  def show
+    @user = User.find(params[:id])
+    @microposts = @user.microposts
+  end
+
   private
 
     def user_params
