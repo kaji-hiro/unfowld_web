@@ -13,10 +13,8 @@ gem 'rails', '~> 6'
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
 gem 'coffee-rails'
-gem 'sass-rails'
-gem 'uglifier'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
-# gem 'webpacker', '~> 4.0'
+gem 'webpacker', '~> 4.0'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -49,8 +47,6 @@ gem 'rack-mini-profiler', '~> 1.1'
 gem 'config', '~> 2.0'
 # Support SP
 gem 'jpmobile', '~> 6.0'
-# Activate font-awesome
-gem 'font-awesome-sass', '~> 5.11'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

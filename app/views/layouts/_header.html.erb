@@ -1,6 +1,6 @@
 <header class='header'>
   <div class='header-link'>
-    <%= image_tag 'logo.png', class: 'header-link-logo'%>
+    <%= image_pack_tag 'logo.png', class: 'header-link-logo' %>
     <% if logged_in? %>
       <%= link_to 'home', root_path, class: 'header-link-item' %>
       <%= link_to 'user', users_path, class: 'header-link-item' %>
