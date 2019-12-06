@@ -3,6 +3,8 @@ AllCops:
     - 'node_modules/**/*'
     - 'vendor/**/*'
     - 'db/schema.rb'
+    - 'bin/webpack'
+    - 'bin/webpack-dev-server'
 
 Style/FrozenStringLiteralComment:
   Enabled: false
