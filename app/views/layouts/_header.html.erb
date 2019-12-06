@@ -3,7 +3,7 @@
     <%= image_pack_tag 'logo.png', class: 'header-link-logo' %>
     <% if logged_in? %>
       <%= link_to 'home', root_path, class: 'header-link-item' %>
-      <%= link_to 'user', users_path, class: 'header-link-item' %>
+      <%= link_to 'user', user_path(id: current_user.id), class: 'header-link-item' %>
       <%= link_to 'log_out', logout_path, method: :delete, class: 'header-link-item' %>
     <% else %>
       <%= link_to 'home', root_path, class: 'header-link-item' %>

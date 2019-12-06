@@ -4,9 +4,9 @@
 // that code so it'll be compiled.
 import "core-js/stable";
 import "regenerator-runtime/runtime";
-import "../src/application.scss"
-import '@fortawesome/fontawesome-free/js/all'
-const images = require.context('../images/', true)
+import "../src/application.scss";
+import '@fortawesome/fontawesome-free/js/all';
+const images = require.context('../images/', true);
 
 require("@rails/ujs").start()
 require("turbolinks").start()
