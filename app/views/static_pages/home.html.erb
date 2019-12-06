@@ -3,6 +3,7 @@
     <aside class="col-md-4">
       <section class="micropost_form">
         <%= render 'shared/micropost_form' %>
+        <%= render 'microposts/micropost', micropost: Micropost.find(6) %>
       </section>
     </aside>
   </div>
