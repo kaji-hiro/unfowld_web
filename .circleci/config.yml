@@ -47,6 +47,7 @@ jobs:
       - run: bundle exec rails db:create
       - run: bundle exec rails db:migrate
       - run: bundle exec rails db:schema:load
+      - run: bin/webpack
 
       # run tests!
       - run:
