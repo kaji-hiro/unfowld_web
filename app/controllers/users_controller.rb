@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  def index; end
+
   def new
     @user = User.new
   end
@@ -7,6 +9,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       logger.debug('成功')
+      redirect_to root_path
     else
       render 'new'
     end
@@ -15,6 +18,11 @@ class UsersController < ApplicationController
   def edit; end
 
   def update; end
+
+  def show
+    @user = User.find(params[:id])
+    @microposts = @user.microposts
+  end
 
   private
 
