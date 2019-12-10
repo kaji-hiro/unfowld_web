@@ -1,12 +1,15 @@
 AllCops:
   Exclude:
+    - 'node_modules/**/*'
     - 'vendor/**/*'
     - 'db/schema.rb'
+    - 'bin/webpack'
+    - 'bin/webpack-dev-server'
 
 Style/FrozenStringLiteralComment:
   Enabled: false
 
-Layout/AlignHash:
+Layout/HashAlignment:
   EnforcedHashRocketStyle: table
 
 Metrics/LineLength:
@@ -23,3 +26,9 @@ Layout/IndentationConsistency:
 
 Style/AsciiComments:
   Enabled: false
+
+Metrics/AbcSize:
+  Max: 20
+
+Metrics/MethodLength:
+  Max: 20

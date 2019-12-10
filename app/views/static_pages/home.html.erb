@@ -1,3 +1,15 @@
+<% if logged_in? %>
+  <div class="row">
+    <aside class="col-md-4">
+      <section class="micropost_form">
+        <%= render 'shared/micropost_form' %>
+        <%= render 'microposts/micropost', microposts: Micropost.all %>
+        <!-- 要変更 -->
+      </section>
+    </aside>
+  </div>
+<% else %>
 <div class='contents'>
   <h1 class='title'>明治大学ファッションサークルUnfowld</h1>
 </div>
+<% end %>
