@@ -6,9 +6,45 @@
     @content;
   }
 }
+@mixin pc {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
 
 .contents {
   margin: 0 5%;
+
+  &-title {
+    font-size: 50px;
+  }
+
+  &-collectionbox {
+    display: flex;
+    justify-content: space-between;
+
+    &-image {
+      width: 50%;
+      margin: 50px;
+    }
+
+    &-text {
+      margin: 50px;
+      width: 50%;
+      &-title {
+        text-align: center;
+        border-bottom: solid 1px #000000;
+        padding-bottom: 15px;
+        &-detail {
+          font-weight: lighter;
+          color: gray;
+        }
+      }
+      &-body {
+
+      }
+    }
+  }
 
   &-home {
     background-image: image-url('../images/logo.png');
@@ -20,14 +56,6 @@
 
     &-links {
       font-size: 20px;
-    }
-  }
-
-  &-about {
-    margin: 20px;
-
-    &-text {
-      font-size: 15px;
     }
   }
 
