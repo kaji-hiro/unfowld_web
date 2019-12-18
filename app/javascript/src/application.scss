@@ -159,8 +159,10 @@ body {
       list-style-type: none;
       font-size: 25px;
       text-align: center;
-      &-top, &-bottom{
+
+      &-top, &-bottom {
         text-align: center;
+
         li {
           margin: 24px 0;
         }
