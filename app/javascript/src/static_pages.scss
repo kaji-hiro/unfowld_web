@@ -41,6 +41,7 @@
           &-detail {
             font-weight: lighter;
             color: gray;
+            font-size: 80%;
           }
         }
 
@@ -72,7 +73,7 @@
     &-title {
       font-size: 25px;
     }
-    &-collectionbox, &-reversecollectionbox{
+    &-collectionbox, &-reversecollectionbox {
       display: flex;
       flex-direction: column;
 
@@ -80,6 +81,7 @@
         width: 80%;
         align-self: center;
       }
+
       &-text {
         &-title {
           text-align: center;
@@ -90,6 +92,7 @@
             font-weight: lighter;
             color: gray;
             margin: 5px;
+            font-size: 80%;
           }
         }
 
