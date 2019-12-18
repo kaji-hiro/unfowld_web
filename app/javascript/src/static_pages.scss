@@ -6,6 +6,7 @@
     @content;
   }
 }
+
 @mixin pc {
   @media (min-width: 768px) {
     @content;
@@ -14,72 +15,88 @@
 
 .contents {
   margin: 0 5%;
-
-  &-title {
-    font-size: 50px;
-  }
-
-  &-collectionbox {
-    display: flex;
-    justify-content: space-between;
-
-    &-image {
-      width: 50%;
-      margin: 50px;
+  @include pc {
+    &-title {
+      font-size: 50px;
     }
 
-    &-text {
-      margin: 50px;
-      width: 50%;
-      &-title {
-        text-align: center;
-        border-bottom: solid 1px #000000;
-        padding-bottom: 15px;
-        &-detail {
-          font-weight: lighter;
-          color: gray;
+    &-collectionbox {
+      display: flex;
+      justify-content: space-between;
+
+      &-image {
+        width: 50%;
+        margin: 50px;
+      }
+
+      &-text {
+        margin: 50px;
+        width: 50%;
+
+        &-title {
+          text-align: center;
+          border-bottom: solid 1px #000000;
+          padding-bottom: 15px;
+
+          &-detail {
+            font-weight: lighter;
+            color: gray;
+          }
+        }
+
+        &-body {
         }
       }
-      &-body {
+    }
 
+    &-reversecollectionbox {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+
+    &-home {
+      background-image: image-url('../images/logo.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-attachment: fixed;
+      margin-top: -22px;
+
+      &-links {
+        font-size: 20px;
       }
     }
   }
 
-  &-home {
-    background-image: image-url('../images/logo.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    margin-top: -22px;
-
-    &-links {
-      font-size: 20px;
+  @include sp {
+    &-title {
+      font-size: 25px;
     }
-  }
-
-  &-contact {
-    margin: 20px;
-    font-size: 15px;
-  }
-
-  &-members {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-
-    &-item {
+    &-collectionbox, &-reversecollectionbox{
       display: flex;
       flex-direction: column;
-      width: 40%;
-      border: 3px solid #000;
-      border-radius: 10px;
-      margin: 15px;
-      padding: 20px;
-      box-shadow: 8px 8px 4px #dcdcdc;
-      @include sp {
+
+      &-image {
         width: 80%;
+        align-self: center;
+      }
+      &-text {
+        &-title {
+          text-align: center;
+          border-bottom: solid 1px #000000;
+          padding-bottom: 5px;
+
+          &-detail {
+            font-weight: lighter;
+            color: gray;
+            margin: 5px;
+          }
+        }
+
+        &-body {
+          text-align: left;
+          margin: 5% 10%;
+        }
       }
     }
   }
