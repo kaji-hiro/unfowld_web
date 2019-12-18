@@ -19,132 +19,155 @@
 @import 'actiontext.scss';
 
 @import '~@fortawesome/fontawesome-free/scss/fontawesome';
+
 @mixin sp {
   @media (max-width: 767px) {
     @content;
   }
 }
 
-body {
-  margin: 0;
+@mixin pc {
+  @media (min-width: 768px) {
+    @content;
+  }
 }
 
-.header-link {
-  background-color: #fff;
-  height: 50px;
-  display: inline-flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  width: 100%;
-  align-items: center;
-  box-shadow: 0 3px 2px #dcdcdc;
+body {
+  margin: 0;
+  font-family: Serif;
+}
 
-  &-item {
-    font-size: 25px;
-    text-decoration: none;
-    height: 100%;
-    width: 10%;
-    color: #000;
-    text-align: center;
-    @include sp {
-      padding: 10px;
-      color: rgba(0,0,0,1);
-      border-bottom: 1px rgba(255,255,255,1) solid;
-      /*配置*/
-      pointer-events: auto;
+//header start
+.main-header {
+  @include pc {
+    height: 300px;
+
+    &-logo {
+      float: left;
+      height: 100px;
+      padding-top: 100px;
+      padding-left: 70px;
     }
 
-    &:hover {
-      background-color: #404040;
-      color: #fff;
-    }
-  }
-
-  &-logo {
-    width: 20%;
-    margin-right: auto;
-    @include sp {
-      width: 30%;
-    }
-  }
-
-  #menu {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 100;
-
-    div {
-      width: 50px;
-      height: 50px;
-      background: #fff;
-      overflow: hidden;
-      position: absolute;
-      right: 0;
-    }
-
-    ul {
-      background: #fff;
-      box-shadow: 0 3px 2px #dcdcdc;
-      width: 40%;
-      position: absolute;
-      top: 30px;
-      right: 0;
+    &-shown, &-unshown, &-line {
       display: none;
+    }
+
+    #nav-content {
+      height: 100%;
+    }
+    &-contents {
+      height: 100%;
       list-style-type: none;
-      padding-left: 0;
-    }
+      font-size: 25px;
+      display: flex;
+      flex-flow: column-reverse;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-right: 50px;
 
-    li {
-      padding: 10px 0;
-      color: rgba(0,0,0,1);
-      pointer-events: auto;
-      box-shadow: -3px 3px 2px #dcdcdc;
-      text-align: center;
+      &-top {
+        margin-top: 30px;
+        display: flex;
+      }
 
-      a {
-        text-decoration: none;
-        color: #000;
+      &-bottom {
+        margin-bottom: 30px;
+        display: flex;
+      }
+
+
+      > li {
+        margin: 25px 0;
       }
     }
 
-    .header-link-pulldown-open {
-      color: #000;
-      font-size: 40px;
-      display: block;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      text-align: center;
-      pointer-events: auto;
+    &-item {
+      text-decoration: none;
+      color: #000000;
+      padding: 20px;
+    }
+  }
+
+  @include sp {
+    height: 50px;
+    position: relative;
+
+    &-logo {
+      float: left;
+      height: auto;
+      max-height: 100%;
+      padding-top: 5px;
+      padding-left: 5px;
     }
 
-    .header-link-pulldown-close {
-      color: #000;
-      font-size: 40px;
+    //チェックボックス等は非表示に
+    &-unshown {
       display: none;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      text-align: center;
-      pointer-events: auto;
     }
 
-    &:target {
-      .header-link-pulldown-open {
-        display: none;
-      }
+    //アイコンのスペース
+    #nav-open {
+      font-size: 20px;
+      float: right;
+      margin: 10px;
+    }
+    /*閉じる用の薄黒カバー*/
+    #nav-close {
+      display: none; /*はじめは隠しておく*/
+      position: fixed;
+      z-index: 99;
+      top: 0; /*全体に広がるように*/
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: black;
+      opacity: 0;
+      transition: .3s ease-in-out;
+    }
 
-      .header-link-pulldown-close {
-        display: block;
-      }
+    /*中身*/
+    #nav-content {
+      overflow: auto;
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 9999; /*最前面に*/
+      width: 50%; /*右側に隙間を作る（閉じるカバーを表示）*/
+      max-width: 330px; /*最大幅（調整してください）*/
+      height: 100%;
+      background: #fff; /*背景色*/
+      transition: .3s ease-in-out; /*滑らかに表示*/
+      -webkit-transform: translateX(105%);
+      transform: translateX(105%); /*右に隠しておく*/
+    }
 
-      ul {
-        display: block;
+    /*チェックが入ったらもろもろ表示*/
+    #nav-input:checked ~ #nav-close {
+      display: block; /*カバーを表示*/
+      opacity: .5;
+    }
+
+    #nav-input:checked ~ #nav-content {
+      -webkit-transform: translateX(0%);
+      transform: translateX(0%); /*中身を表示*/
+      box-shadow: 6px 0 25px rgba(0, 0, 0, .15);
+    }
+
+    &-contents {
+      list-style-type: none;
+      font-size: 25px;
+      padding: 0;
+      text-align: center;
+
+      > li {
+        margin: 25px 0;
       }
+    }
+
+    &-item {
+      text-decoration: none;
+      color: #000000;
     }
   }
 }
