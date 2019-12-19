@@ -2,10 +2,18 @@
 <html>
   <head>
     <title>UnfowldWeb</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154752021-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+        gtag('config', 'UA-154752021-1');
+    </script>
+
+
+    <%= display_meta_tags(default_meta_tags) %>
 
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
