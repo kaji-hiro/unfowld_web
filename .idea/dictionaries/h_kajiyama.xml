@@ -2,9 +2,12 @@
   <dictionary name="h.kajiyama">
     <words>
       <w>bcrypt</w>
+      <w>collectionbox</w>
       <w>jbuilder</w>
       <w>kaminari</w>
+      <w>reversecollectionbox</w>
       <w>turbolinks</w>
+      <w>unfowld</w>
       <w>webpacker</w>
     </words>
   </dictionary>
