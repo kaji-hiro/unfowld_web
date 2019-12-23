@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>UnfowldWeb</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154752021-1"></script>
     <script>
@@ -11,6 +12,7 @@
 
         gtag('config', 'UA-154752021-1');
     </script>
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
 
 
     <%= display_meta_tags(default_meta_tags) %>
@@ -21,6 +23,9 @@
 
   <body>
     <%= render 'layouts/header' %>
+    <div class='flash-success'>
+      <%= flash[:success] %>
+    </div>
     <%= yield %>
   </body>
 </html>

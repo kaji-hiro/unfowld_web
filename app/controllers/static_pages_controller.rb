@@ -1,4 +1,5 @@
 class StaticPagesController < ApplicationController
+  include ApplicationHelper
   include SessionsHelper
 
   def home
@@ -7,7 +8,15 @@ class StaticPagesController < ApplicationController
 
   def about; end
 
-  def contact; end
+  def contact
+    if params[:message].present?
+      notify_slack('email:' + params[:email] + "\n\n" + params[:message])
+      flash[:success] = '送信が完了しました'
+      redirect_to action: 'contact'
+    else
+      flash[:error] = '問題が発生しました'
+    end
+  end
 
   def members; end
 end
