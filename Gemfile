@@ -53,6 +53,8 @@ gem 'jpmobile', '~> 6.0'
 gem 'image_processing', '~> 1.2'
 # Add metatags for SEO
 gem 'meta-tags'
+# Notify Slack
+gem 'slack-notifier', '~> 2.3'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false

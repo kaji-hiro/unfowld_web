@@ -27,4 +27,9 @@ module ApplicationHelper
       }
     }
   end
+
+  def slack_notification(text)
+    message = Slack::Notifier.new 'https://hooks.slack.com/services/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'
+    message.ping(text)
+  end
 end
