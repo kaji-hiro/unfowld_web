@@ -29,7 +29,7 @@ module ApplicationHelper
   end
 
   def notify_slack(text)
-    message = Slack::Notifier.new 'https://hooks.slack.com/services/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'
+    message = Slack::Notifier.new 'https://hooks.slack.com/services/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'
     message.ping(':speaker:ユーザーからのお問い合わせです')
     message.ping('```' + text + '```')
   end
