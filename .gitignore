@@ -83,4 +83,4 @@ config/environments/*.local.yml
 yarn-debug.log*
 .yarn-integrity
 
-.idea/*
+.idea/
