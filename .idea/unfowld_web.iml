@@ -26,179 +26,179 @@
     <orderEntry type="module" module-name="sassc-2.2.1" />
     <orderEntry type="module" module-name="sassc-rails-2.1.2" />
     <orderEntry type="module-library">
-      <library name="actioncable (vbundled(6.0.2)) [path][gem]" type="rubylib">
+      <library name="actioncable (vbundled(6.0.2.1)) [path][gem]" type="rubylib">
         <properties>
           <option name="version" value="4" />
         </properties>
         <CLASSES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/actioncable-6.0.2/app" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/actioncable-6.0.2/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/actioncable-6.0.2.1/app" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/actioncable-6.0.2.1/lib" />
         </CLASSES>
         <SOURCES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/actioncable-6.0.2/app" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/actioncable-6.0.2/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/actioncable-6.0.2.1/app" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/actioncable-6.0.2.1/lib" />
         </SOURCES>
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="actionmailbox (vbundled(6.0.2)) [path][gem]" type="rubylib">
+      <library name="actionmailbox (vbundled(6.0.2.1)) [path][gem]" type="rubylib">
         <properties>
           <option name="version" value="4" />
         </properties>
         <CLASSES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/actionmailbox-6.0.2/db" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/actionmailbox-6.0.2/app" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/actionmailbox-6.0.2/lib" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/actionmailbox-6.0.2/config" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/actionmailbox-6.0.2.1/db" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/actionmailbox-6.0.2.1/app" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/actionmailbox-6.0.2.1/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/actionmailbox-6.0.2.1/config" />
         </CLASSES>
         <SOURCES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/actionmailbox-6.0.2/db" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/actionmailbox-6.0.2/app" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/actionmailbox-6.0.2/lib" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/actionmailbox-6.0.2/config" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/actionmailbox-6.0.2.1/db" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/actionmailbox-6.0.2.1/app" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/actionmailbox-6.0.2.1/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/actionmailbox-6.0.2.1/config" />
         </SOURCES>
         <excluded>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/actionmailbox-6.0.2/db" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/actionmailbox-6.0.2/config" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/actionmailbox-6.0.2.1/db" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/actionmailbox-6.0.2.1/config" />
         </excluded>
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="actionmailer (vbundled(6.0.2)) [path][gem]" type="rubylib">
+      <library name="actionmailer (vbundled(6.0.2.1)) [path][gem]" type="rubylib">
         <properties>
           <option name="version" value="4" />
         </properties>
         <CLASSES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/actionmailer-6.0.2/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/actionmailer-6.0.2.1/lib" />
         </CLASSES>
         <SOURCES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/actionmailer-6.0.2/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/actionmailer-6.0.2.1/lib" />
         </SOURCES>
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="actionpack (vbundled(6.0.2)) [path][gem]" type="rubylib">
+      <library name="actionpack (vbundled(6.0.2.1)) [path][gem]" type="rubylib">
         <properties>
           <option name="version" value="4" />
         </properties>
         <CLASSES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/actionpack-6.0.2/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/actionpack-6.0.2.1/lib" />
         </CLASSES>
         <SOURCES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/actionpack-6.0.2/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/actionpack-6.0.2.1/lib" />
         </SOURCES>
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="actiontext (vbundled(6.0.2)) [path][gem]" type="rubylib">
+      <library name="actiontext (vbundled(6.0.2.1)) [path][gem]" type="rubylib">
         <properties>
           <option name="version" value="4" />
         </properties>
         <CLASSES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/actiontext-6.0.2/db" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/actiontext-6.0.2/app" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/actiontext-6.0.2/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/actiontext-6.0.2.1/db" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/actiontext-6.0.2.1/app" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/actiontext-6.0.2.1/lib" />
         </CLASSES>
         <SOURCES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/actiontext-6.0.2/db" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/actiontext-6.0.2/app" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/actiontext-6.0.2/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/actiontext-6.0.2.1/db" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/actiontext-6.0.2.1/app" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/actiontext-6.0.2.1/lib" />
         </SOURCES>
         <excluded>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/actiontext-6.0.2/db" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/actiontext-6.0.2.1/db" />
         </excluded>
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="actionview (vbundled(6.0.2)) [path][gem]" type="rubylib">
+      <library name="actionview (vbundled(6.0.2.1)) [path][gem]" type="rubylib">
         <properties>
           <option name="version" value="4" />
         </properties>
         <CLASSES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/actionview-6.0.2/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/actionview-6.0.2.1/lib" />
         </CLASSES>
         <SOURCES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/actionview-6.0.2/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/actionview-6.0.2.1/lib" />
         </SOURCES>
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="activejob (vbundled(6.0.2)) [path][gem]" type="rubylib">
+      <library name="activejob (vbundled(6.0.2.1)) [path][gem]" type="rubylib">
         <properties>
           <option name="version" value="4" />
         </properties>
         <CLASSES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/activejob-6.0.2/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/activejob-6.0.2.1/lib" />
         </CLASSES>
         <SOURCES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/activejob-6.0.2/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/activejob-6.0.2.1/lib" />
         </SOURCES>
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="activemodel (vbundled(6.0.2)) [path][gem]" type="rubylib">
+      <library name="activemodel (vbundled(6.0.2.1)) [path][gem]" type="rubylib">
         <properties>
           <option name="version" value="4" />
         </properties>
         <CLASSES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/activemodel-6.0.2/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/activemodel-6.0.2.1/lib" />
         </CLASSES>
         <SOURCES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/activemodel-6.0.2/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/activemodel-6.0.2.1/lib" />
         </SOURCES>
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="activerecord (vbundled(6.0.2)) [path][gem]" type="rubylib">
+      <library name="activerecord (vbundled(6.0.2.1)) [path][gem]" type="rubylib">
         <properties>
           <option name="version" value="4" />
         </properties>
         <CLASSES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/activerecord-6.0.2/lib" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/activerecord-6.0.2/examples" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/activerecord-6.0.2.1/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/activerecord-6.0.2.1/examples" />
         </CLASSES>
         <SOURCES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/activerecord-6.0.2/lib" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/activerecord-6.0.2/examples" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/activerecord-6.0.2.1/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/activerecord-6.0.2.1/examples" />
         </SOURCES>
         <excluded>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/activerecord-6.0.2/examples" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/activerecord-6.0.2.1/examples" />
         </excluded>
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="activestorage (vbundled(6.0.2)) [path][gem]" type="rubylib">
+      <library name="activestorage (vbundled(6.0.2.1)) [path][gem]" type="rubylib">
         <properties>
           <option name="version" value="4" />
         </properties>
         <CLASSES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/activestorage-6.0.2/db" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/activestorage-6.0.2/app" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/activestorage-6.0.2/lib" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/activestorage-6.0.2/config" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/activestorage-6.0.2.1/db" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/activestorage-6.0.2.1/app" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/activestorage-6.0.2.1/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/activestorage-6.0.2.1/config" />
         </CLASSES>
         <SOURCES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/activestorage-6.0.2/db" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/activestorage-6.0.2/app" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/activestorage-6.0.2/lib" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/activestorage-6.0.2/config" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/activestorage-6.0.2.1/db" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/activestorage-6.0.2.1/app" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/activestorage-6.0.2.1/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/activestorage-6.0.2.1/config" />
         </SOURCES>
         <excluded>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/activestorage-6.0.2/db" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/activestorage-6.0.2/config" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/activestorage-6.0.2.1/db" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/activestorage-6.0.2.1/config" />
         </excluded>
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="activesupport (vbundled(6.0.2)) [path][gem]" type="rubylib">
+      <library name="activesupport (vbundled(6.0.2.1)) [path][gem]" type="rubylib">
         <properties>
           <option name="version" value="4" />
         </properties>
         <CLASSES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/activesupport-6.0.2/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/activesupport-6.0.2.1/lib" />
         </CLASSES>
         <SOURCES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/activesupport-6.0.2/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/activesupport-6.0.2.1/lib" />
         </SOURCES>
       </library>
     </orderEntry>
@@ -818,20 +818,20 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="dry-schema (vbundled(1.4.1)) [path][gem]" type="rubylib">
+      <library name="dry-schema (vbundled(1.4.2)) [path][gem]" type="rubylib">
         <properties>
           <option name="version" value="4" />
         </properties>
         <CLASSES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/dry-schema-1.4.1/lib" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/dry-schema-1.4.1/config" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/dry-schema-1.4.2/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/dry-schema-1.4.2/config" />
         </CLASSES>
         <SOURCES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/dry-schema-1.4.1/lib" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/dry-schema-1.4.1/config" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/dry-schema-1.4.2/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/dry-schema-1.4.2/config" />
         </SOURCES>
         <excluded>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/dry-schema-1.4.1/config" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/dry-schema-1.4.2/config" />
         </excluded>
       </library>
     </orderEntry>
@@ -1004,15 +1004,15 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="image_processing (vbundled(1.9.3)) [path][gem]" type="rubylib">
+      <library name="image_processing (vbundled(1.10.0)) [path][gem]" type="rubylib">
         <properties>
           <option name="version" value="4" />
         </properties>
         <CLASSES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/image_processing-1.9.3/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/image_processing-1.10.0/lib" />
         </CLASSES>
         <SOURCES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/image_processing-1.9.3/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/image_processing-1.10.0/lib" />
         </SOURCES>
       </library>
     </orderEntry>
@@ -1526,29 +1526,29 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="rack (vbundled(2.0.7)) [path][gem]" type="rubylib">
+      <library name="rack (vbundled(2.0.8)) [path][gem]" type="rubylib">
         <properties>
           <option name="version" value="4" />
         </properties>
         <CLASSES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-2.0.7/bin" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-2.0.7/lib" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-2.0.7/test" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-2.0.7/contrib" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-2.0.7/example" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-2.0.8/bin" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-2.0.8/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-2.0.8/test" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-2.0.8/contrib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-2.0.8/example" />
         </CLASSES>
         <SOURCES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-2.0.7/bin" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-2.0.7/lib" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-2.0.7/test" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-2.0.7/contrib" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-2.0.7/example" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-2.0.8/bin" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-2.0.8/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-2.0.8/test" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-2.0.8/contrib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-2.0.8/example" />
         </SOURCES>
         <excluded>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-2.0.7/bin" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-2.0.7/test" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-2.0.7/contrib" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-2.0.7/example" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-2.0.8/bin" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-2.0.8/test" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-2.0.8/contrib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-2.0.8/example" />
         </excluded>
       </library>
     </orderEntry>
@@ -1597,7 +1597,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="rails (vbundled(6.0.2)) [path][gem]" type="rubylib">
+      <library name="rails (vbundled(6.0.2.1)) [path][gem]" type="rubylib">
         <properties>
           <option name="version" value="4" />
         </properties>
@@ -1666,20 +1666,20 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="railties (vbundled(6.0.2)) [path][gem]" type="rubylib">
+      <library name="railties (vbundled(6.0.2.1)) [path][gem]" type="rubylib">
         <properties>
           <option name="version" value="4" />
         </properties>
         <CLASSES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/railties-6.0.2/exe" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/railties-6.0.2/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/railties-6.0.2.1/exe" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/railties-6.0.2.1/lib" />
         </CLASSES>
         <SOURCES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/railties-6.0.2/exe" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/railties-6.0.2/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/railties-6.0.2.1/exe" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/railties-6.0.2.1/lib" />
         </SOURCES>
         <excluded>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/railties-6.0.2/exe" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/railties-6.0.2.1/exe" />
         </excluded>
       </library>
     </orderEntry>
@@ -1941,6 +1941,24 @@
         </SOURCES>
         <excluded>
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/sexp_processor-4.13.0/test" />
+        </excluded>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="slack-notifier (vbundled(2.3.2)) [path][gem]" type="rubylib">
+        <properties>
+          <option name="version" value="4" />
+        </properties>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/slack-notifier-2.3.2/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/slack-notifier-2.3.2/spec" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/slack-notifier-2.3.2/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/slack-notifier-2.3.2/spec" />
+        </SOURCES>
+        <excluded>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/slack-notifier-2.3.2/spec" />
         </excluded>
       </library>
     </orderEntry>

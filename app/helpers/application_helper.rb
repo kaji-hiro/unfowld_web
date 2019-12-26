@@ -19,7 +19,7 @@ module ApplicationHelper
         image: image_tag('/logo.png'),
         site_name: 'Unfowld',
         locale: 'ja_JP'
-      },
+      },it 
       twitter: {
         site: '@ツイッターのアカウント名',
         card: 'summary',
@@ -29,7 +29,7 @@ module ApplicationHelper
   end
 
   def notify_slack(text)
-    message = Slack::Notifier.new 'https://hooks.slack.com/services/TN0K4PTRD/BRM2NJK18/HTpXKb6uXXrgYpY3K0'
+    message = Slack::Notifier.new "#{ENV['SLACKWEBHOOK']}"
     message.ping(':speaker:ユーザーからのお問い合わせです')
     message.ping('```' + text + '```')
   end
