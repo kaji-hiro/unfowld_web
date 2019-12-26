@@ -19,7 +19,7 @@ module ApplicationHelper
         image: image_tag('/logo.png'),
         site_name: 'Unfowld',
         locale: 'ja_JP'
-      },it 
+      },
       twitter: {
         site: '@ツイッターのアカウント名',
         card: 'summary',
