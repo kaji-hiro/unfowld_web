@@ -23,9 +23,7 @@
 
   <body>
     <%= render 'layouts/header' %>
-    <div class='flash-success'>
-      <%= flash[:success] %>
-    </div>
     <%= yield %>
+    <%= render 'layouts/footer' %>
   </body>
 </html>

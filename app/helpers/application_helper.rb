@@ -29,7 +29,7 @@ module ApplicationHelper
   end
 
   def notify_slack(text)
-    message = Slack::Notifier.new "#{ENV['SLACKWEBHOOK']}"
+    message = Slack::Notifier.new ENV['SLACKWEBHOOK']
     message.ping(':speaker:ユーザーからのお問い合わせです')
     message.ping('```' + text + '```')
   end
