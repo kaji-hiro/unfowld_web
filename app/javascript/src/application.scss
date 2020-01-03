@@ -32,8 +32,9 @@
 body {
   margin: 0;
   font-family: 'Lato', sans-serif;
+  font-weight: 300;
 }
-//header start
+
 .main-header {
   @include pc {
     height: 300px;
@@ -307,6 +308,7 @@ body {
   text-align: center;
   border-radius: 10px;
 }
+
 .flash-error {
   background-color: red;
   text-align: center;
