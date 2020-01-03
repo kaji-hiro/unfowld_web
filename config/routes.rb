@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root 'static_pages#home'
   get 'static_pages/about'
   get 'static_pages/contact'
-  post 'static_pages/contact'
+  post 'static_pages/send_messege_to_slack'
   get 'static_pages/members'
   # sessions
   get    'login'   => 'sessions#new'
