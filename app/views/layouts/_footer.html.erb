@@ -1,0 +1,37 @@
+<div class='footer'>
+  <div class='footer-links'>
+    <ul class='footer-links-list'>
+      <% if logged_in? %>
+        <%= link_to 'home', root_path, class: 'main-header-item' %>
+        <%= link_to 'user', users_path, class: 'main-header-item' %>
+        <%= link_to 'log_out', logout_path, method: :delete, class: 'main-header-item' %>
+      <% else %>
+        <div class="footer-links-list-top">
+          <li><%= link_to 'Home', root_path, class: 'footer-links-list-item' %></li>
+          <li><%= link_to 'About', static_pages_about_path, class: 'footer-links-list-item' %></li>
+          <li><%= link_to 'Members', static_pages_members_path, class: 'footer-links-list-item' %></li>
+          <li><%= link_to 'Events', static_pages_contact_path, class: 'footer-links-list-item' %></li>
+          <li><%= link_to 'Blog', static_pages_contact_path, class: 'footer-links-list-item' %></li>
+        </div>
+        <div class="footer-links-list-bottom">
+          <li><%= link_to 'Contact', static_pages_contact_path, class: 'footer-links-list-item' %></li>
+          <li><%= link_to 'Our Partners', static_pages_contact_path, class: 'footer-links-list-item' %></li>
+        </div>
+      <% end %>
+    </ul>
+    <div class='footer-links-sns'>
+      <%= link_to root_path, target: :_blank do %>
+        <i class="fab fa-twitter"></i>
+      <% end %>
+      <%= link_to root_path, target: :_blank do %>
+        <i class="fab fa-youtube"></i>
+      <% end %>
+      <%= link_to root_path, target: :_blank do %>
+        <i class="fab fa-instagram"></i>
+      <% end %>
+    </div>
+  </div>
+  <div class='footer-copyright'>
+    <p>Copyright © 2019 Unfowld inc. All rights reserved.</p>
+  </div>
+</div>
