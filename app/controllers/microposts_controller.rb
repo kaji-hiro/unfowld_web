@@ -1,12 +1,15 @@
 class MicropostsController < ApplicationController
   include SessionsHelper
   before_action :logged_in_user, only: %i[create destroy]
-  skip_before_action :verify_authenticity_token
+
+  def new
+    @micropost = Micropost.new
+  end
 
   def create
     @micropost = current_user.microposts.build(micropost_params)
     if @micropost.save!
-      flash[:success] = 'Micropost created!'
+      flash.now[:success] = 'Micropost created!'
       redirect_to root_url
     else
       render 'static_pages/home'

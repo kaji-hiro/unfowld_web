@@ -1,7 +1,7 @@
 <li id="micropost-<%= micropost.id %>">
   <span class="user"><%= link_to micropost.user.name, micropost.user %></span>
-  <span class="thumbnail"><%= micropost.thumbnail %></span>
   <span class="title"><%= micropost.title %></span>
+  <span class="thumbnail"><%= image_tag url_for(micropost.thumbnail.variant(resize_to_limit: [100, 100])) %></span>
   <span class="content"><%= micropost.content %></span>
   <span class="timestamp">
     Posted <%= time_ago_in_words(micropost.created_at) %> ago.
