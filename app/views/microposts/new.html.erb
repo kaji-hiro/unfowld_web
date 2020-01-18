@@ -1,7 +1,9 @@
 <%= form_with model: @micropost do |form| %>
   <div class="field">
-    <%= form.text_area :title, placeholder: "title" %>
-    <%= form.rich_text_area :content %>
+    <%= form.text_area :title, placeholder: "title", required: true %>
+    <%= form.file_field :thumbnail, required: true %>
+    <%= form.select :article_type, ['event', 'blog'], { include_blank: '選択してください' }, required: true %>
+    <%= form.rich_text_area :content, required: true %>
   </div>
   <%= form.submit "Post", class: "btn btn-primary" %>
 <% end %>
