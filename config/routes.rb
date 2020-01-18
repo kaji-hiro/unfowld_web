@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
   # users
-  resources :users
-  resources :microposts, only: %i[create destroy]
+  resources :users, only: %i[new show]
+  resources :microposts, only: %i[new create destroy]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
