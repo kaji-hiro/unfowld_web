@@ -3,7 +3,7 @@
     <ul class='footer-links-list'>
       <% if logged_in? %>
         <%= link_to 'home', root_path, class: 'main-header-item' %>
-        <%= link_to 'user', users_path, class: 'main-header-item' %>
+        <%= link_to 'user', user_path(current_user.id), class: 'main-header-item' %>
         <%= link_to 'log_out', logout_path, method: :delete, class: 'main-header-item' %>
       <% else %>
         <div class="footer-links-list-top">

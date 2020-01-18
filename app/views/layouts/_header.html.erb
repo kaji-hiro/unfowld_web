@@ -7,23 +7,23 @@
   <label class="main-header-unshown" id="nav-close" for="nav-input"></label>
   <div id="nav-content">
     <ul class='main-header-contents'>
-      <% if logged_in? %>
-        <%= link_to 'home', root_path, class: 'main-header-item' %>
-        <%= link_to 'user', users_path, class: 'main-header-item' %>
-        <%= link_to 'log_out', logout_path, method: :delete, class: 'main-header-item' %>
-      <% else %>
-        <div class="main-header-contents-bottom">
-          <li><%= link_to 'Home', root_path, class: 'main-header-item' %></li>
-          <li><%= link_to 'About', static_pages_about_path, class: 'main-header-item' %></li>
-          <li><%= link_to 'Members', static_pages_members_path, class: 'main-header-item' %></li>
-          <li><%= link_to 'Events/Blog', static_pages_contact_path, class: 'main-header-item' %></li>
-        </div>
-        <i class="fas fa-minus fa-rotate-90 main-header-line"></i>
-        <div class="main-header-contents-top">
+      <div class="main-header-contents-bottom">
+        <li><%= link_to 'Home', root_path, class: 'main-header-item' %></li>
+        <li><%= link_to 'About', static_pages_about_path, class: 'main-header-item' %></li>
+        <li><%= link_to 'Members', static_pages_members_path, class: 'main-header-item' %></li>
+        <li><%= link_to 'Events/Blog', static_pages_contact_path, class: 'main-header-item' %></li>
+      </div>
+      <i class="fas fa-minus fa-rotate-90 main-header-line"></i>
+      <div class="main-header-contents-top">
+        <% if logged_in? %>
+          <%= link_to 'User', user_path(current_user.id), class: 'main-header-item' %>
+          <%= link_to 'Article', new_micropost_path, class: 'main-header-item' %>
+          <%= link_to 'Log out', logout_path, method: :delete, class: 'main-header-item' %>
+        <% else %>
           <li><%= link_to 'Contact', static_pages_contact_path, class: 'main-header-item' %></li>
           <li><%= link_to 'Our Partners', static_pages_contact_path, class: 'main-header-item' %></li>
-        </div>
-      <% end %>
+        <% end %>
+      </div>
     </ul>
   </div>
 </header>
