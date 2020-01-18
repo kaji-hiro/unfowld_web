@@ -3,7 +3,8 @@
     <aside class="col-md-4">
       <section class="micropost_form">
         <%= render 'shared/micropost_form' %>
-        <%= render 'microposts/micropost', microposts: Micropost.all %>
+        <%= render partial: 'microposts/micropost',
+                   locals: { microposts: Micropost.all } %>
         <!-- 要変更 -->
       </section>
     </aside>

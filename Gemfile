@@ -47,14 +47,16 @@ gem 'awesome_print', '~> 2.0.0.pre2'
 gem 'rack-mini-profiler', '~> 1.1'
 # Create local database.yml
 gem 'config', '~> 2.0'
-# Support SP
-gem 'jpmobile', '~> 6.0'
 # Use Active Storage variant
 gem 'image_processing', '~> 1.2'
 # Add metatags for SEO
 gem 'meta-tags'
 # Notify Slack
 gem 'slack-notifier', '~> 2.3'
+# Show Action Text Image
+gem 'slim-rails', '~> 3.2'
+# Notify error
+gem 'exception_notification'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
@@ -71,6 +73,7 @@ group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'web-console', '>= 3.3.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  gem 'meta_request'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
