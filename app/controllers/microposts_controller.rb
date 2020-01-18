@@ -18,7 +18,7 @@ class MicropostsController < ApplicationController
   private
 
     def micropost_params
-      params.require(:micropost).permit(:title, :content, :thumbnail)
+      params.require(:micropost).permit(:title, :content, :thumbnail, :article_type)
     end
 
     def logged_in_user

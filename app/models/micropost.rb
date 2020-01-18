@@ -20,7 +20,7 @@
 #
 
 class Micropost < ApplicationRecord
-  has_one_attached :thumbnail
+  has_one_attached :thumbnail, dependent: :destroy
   belongs_to :user
 
   enum article_type: { event: 0, blog: 1 }
@@ -29,4 +29,5 @@ class Micropost < ApplicationRecord
   validates :user_id, presence: true
   validates :article_type, presence: true
   validates :thumbnail, presence: true
+  validates :content, presence: true
 end
