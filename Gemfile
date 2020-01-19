@@ -61,6 +61,8 @@ gem 'exception_notification'
 gem 'sitemap_generator'
 # Run scheduled code
 gem 'whenever', require: false
+# Add breadcrumb
+gem 'gretel'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
