@@ -1,6 +1,6 @@
 <div class='footer'>
   <div class='footer-links'>
-    <ul class='footer-links-list'>
+    <div class='footer-links-list'>
       <% if logged_in? %>
         <%= link_to 'home', root_path, class: 'main-header-item' %>
         <%= link_to 'user', user_path(current_user.id), class: 'main-header-item' %>
@@ -18,15 +18,15 @@
           <li><%= link_to 'Our Partners', static_pages_contact_path, class: 'footer-links-list-item' %></li>
         </div>
       <% end %>
-    </ul>
+    </div>
     <div class='footer-links-sns'>
-      <%= link_to root_path, target: :_blank do %>
+      <%= link_to root_path, 'aria-label': 'icon', target: :_blank do %>
         <i class="fab fa-twitter"></i>
       <% end %>
-      <%= link_to root_path, target: :_blank do %>
+      <%= link_to root_path, 'aria-label': 'icon', target: :_blank do %>
         <i class="fab fa-youtube"></i>
       <% end %>
-      <%= link_to root_path, target: :_blank do %>
+      <%= link_to root_path, 'aria-label': 'icon', target: :_blank do %>
         <i class="fab fa-instagram"></i>
       <% end %>
     </div>
