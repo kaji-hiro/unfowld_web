@@ -84,3 +84,6 @@ yarn-debug.log*
 .yarn-integrity
 
 .idea/
+
+# Ignore sitemap file
+public/sitemap.xml.gz

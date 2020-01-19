@@ -57,6 +57,12 @@ gem 'slack-notifier', '~> 2.3'
 gem 'slim-rails', '~> 3.2'
 # Notify error
 gem 'exception_notification'
+# Add sitemap
+gem 'sitemap_generator'
+# Run scheduled code
+gem 'whenever', require: false
+# Add breadcrumb
+gem 'gretel'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false

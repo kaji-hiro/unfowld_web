@@ -1,12 +1,12 @@
 <header class="main-header">
-  <%= link_to root_path do %>
+  <%= link_to root_path, 'aria-label': 'logo-link' do %>
     <%= image_pack_tag 'logo.png', class: 'main-header-logo', alt: '' %>
   <% end %>
   <input id="nav-input" type="checkbox" class="main-header-unshown">
   <label id="nav-open" for="nav-input" class="main-header-shown"><i class="fas fa-bars"></i></label>
   <label class="main-header-unshown" id="nav-close" for="nav-input"></label>
   <div id="nav-content">
-    <ul class='main-header-contents'>
+    <div class='main-header-contents'>
       <div class="main-header-contents-bottom">
         <li><%= link_to 'Home', root_path, class: 'main-header-item' %></li>
         <li><%= link_to 'About', static_pages_about_path, class: 'main-header-item' %></li>
@@ -24,6 +24,6 @@
           <li><%= link_to 'Our Partners', static_pages_contact_path, class: 'main-header-item' %></li>
         <% end %>
       </div>
-    </ul>
+    </div>
   </div>
 </header>
