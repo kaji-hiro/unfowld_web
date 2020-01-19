@@ -60,6 +60,7 @@ jobs:
           name: install rubocop
           command: gem install rubocop
 
+      - run: rubocop -a
       - run: rubocop
 
       # collect reports
