@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: microposts
+# Table name: articles
 #
 #  id           :bigint           not null, primary key
 #  article_type :integer          not null
@@ -12,14 +12,14 @@
 #
 # Indexes
 #
-#  index_microposts_on_user_id  (user_id)
+#  index_articles_on_user_id  (user_id)
 #
 # Foreign Keys
 #
 #  fk_rails_...  (user_id => users.id)
 #
 
-class Micropost < ApplicationRecord
+class Article < ApplicationRecord
   has_one_attached :thumbnail, dependent: :destroy
   belongs_to :user
 
@@ -30,4 +30,5 @@ class Micropost < ApplicationRecord
   validates :article_type, presence: true
   validates :thumbnail, presence: true
   validates :content, presence: true
+  validates :title, presence: true
 end

@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: microposts
+# Table name: articles
 #
 #  id           :bigint           not null, primary key
 #  article_type :integer          not null
@@ -12,7 +12,7 @@
 #
 # Indexes
 #
-#  index_microposts_on_user_id  (user_id)
+#  index_articles_on_user_id  (user_id)
 #
 # Foreign Keys
 #

@@ -1,15 +1,15 @@
-class MicropostsController < ApplicationController
+class ArticlesController < ApplicationController
   include SessionsHelper
   before_action :logged_in_user, only: %i[create destroy]
 
   def new
-    @micropost = Micropost.new
+    @article = Article.new
   end
 
   def create
-    @micropost = current_user.microposts.build(micropost_params)
-    if @micropost.save!
-      flash.now[:success] = 'Micropost created!'
+    @article = current_user.articles.build(article_params)
+    if @article.save!
+      flash.now[:success] = 'Article created!'
       redirect_to root_url
     else
       render 'static_pages/home'
@@ -20,8 +20,8 @@ class MicropostsController < ApplicationController
 
   private
 
-    def micropost_params
-      params.require(:micropost).permit(:title, :content, :thumbnail, :article_type)
+    def article_params
+      params.require(:article).permit(:title, :content, :thumbnail, :article_type)
     end
 
     def logged_in_user

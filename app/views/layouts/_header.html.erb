@@ -17,7 +17,7 @@
       <div class="main-header-contents-top">
         <% if logged_in? %>
           <%= link_to 'User', user_path(current_user.id), class: 'main-header-item' %>
-          <%= link_to 'Article', new_micropost_path, class: 'main-header-item' %>
+          <%= link_to 'Article', new_article_path, class: 'main-header-item' %>
           <%= link_to 'Log out', logout_path, method: :delete, class: 'main-header-item' %>
         <% else %>
           <li><%= link_to 'Contact', static_pages_contact_path, class: 'main-header-item' %></li>
