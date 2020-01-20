@@ -21,8 +21,8 @@
 
 require 'test_helper'
 
-class articleTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+class ArticleTest < ActiveSupport::TestCase
+  test 'the truth' do
+    assert true
+  end
 end
