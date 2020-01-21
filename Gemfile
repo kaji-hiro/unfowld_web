@@ -82,6 +82,8 @@ group :development do
   gem 'meta_request'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  # Together migration file
+  gem 'squasher'
 end
 
 group :test do
@@ -90,6 +92,10 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
+  # Auto test
+  gem 'guard'
+  gem 'guard-minitest'
+  gem 'guard-rubocop'
 end
 
 group :production do

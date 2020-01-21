@@ -1,24 +1,23 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+## このサイトは明治大学ファッションサークルUnfowldが運営しています
+お問い合わせは[こちら](https://unfowld-web.herokuapp.com/static_pages/contact)から
 
 * Ruby version
+  2.6.5
+* Rails version
+  6.0.2.1
+* Database
+  local: MySQL
+  production: postgreSQL
 
-* System dependencies
+### 開発時実行コマンド
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Server start
+  bundle exec rails s -b 'your IP Adress'
+* Webpack development server start
+  bin/webpack-dev-server
+* Open rails console
+  bundle exec rails c
+* Running real-time tests
+  bundle exec guard

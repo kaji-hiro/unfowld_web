@@ -19,7 +19,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @microposts = @user.microposts
+    @articles = @user.articles
   end
 
   private

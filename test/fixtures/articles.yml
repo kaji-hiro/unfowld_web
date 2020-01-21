@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: microposts
+# Table name: articles
 #
 #  id           :bigint           not null, primary key
 #  article_type :integer          not null
@@ -12,17 +12,18 @@
 #
 # Indexes
 #
-#  index_microposts_on_user_id  (user_id)
+#  index_articles_on_user_id  (user_id)
 #
 # Foreign Keys
 #
 #  fk_rails_...  (user_id => users.id)
 #
 
-require 'test_helper'
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-class MicropostTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
-end
+event:
+  id: 1
+  article_type: 0
+  title: test_event_title
+  content: event_content
+  user: one
