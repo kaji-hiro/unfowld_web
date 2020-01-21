@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class ArticlesControllerTest < ActionDispatch::IntegrationTest
-
   def setup
     @user = users(:one)
     @article = @user.articles.build(article_type: 'event',
