@@ -21,14 +21,9 @@
 
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: MyString
-  image: MyString
-  content: MyText
+event:
+  id: 1
+  article_type: 0
+  title: test_event_title
+  content: event_content
   user: one
-
-two:
-  title: MyString
-  image: MyString
-  content: MyText
-  user: two

@@ -21,6 +21,7 @@ class ArticlesController < ApplicationController
   private
 
     def article_params
+      render 'static_pages/home' if params[:article][:content].blank?
       params.require(:article).permit(:title, :content, :thumbnail, :article_type)
     end
 

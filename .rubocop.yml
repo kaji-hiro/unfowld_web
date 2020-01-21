@@ -14,7 +14,7 @@ Layout/HashAlignment:
   EnforcedHashRocketStyle: table
 
 Metrics/LineLength:
-  Max: 120
+  Enabled: false
 
 Style/Documentation:
   Enabled: false
