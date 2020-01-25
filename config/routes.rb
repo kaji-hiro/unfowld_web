@@ -11,6 +11,9 @@ Rails.application.routes.draw do
   delete 'logout'  => 'sessions#destroy'
   # users
   resources :users
+  # articles
   resources :articles, only: %i[new create destroy]
+  get 'events/index'
+  get 'events/:id', to: 'events#show', as: 'event'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
