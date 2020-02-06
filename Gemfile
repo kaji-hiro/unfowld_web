@@ -24,7 +24,7 @@ gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
-gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1'
 # Paginate
 gem 'kaminari', '~> 1.1'
 # Search Gem
@@ -42,9 +42,9 @@ gem 'bullet', '~> 6.0'
 # Check rails_best_practices
 gem 'rails_best_practices', '~> 1.19'
 # Show Rails Console better
-gem 'awesome_print', '~> 2.0.0.pre2'
+gem 'awesome_print', '~> 1.8'
 # Show Server Time
-gem 'rack-mini-profiler', '~> 1.1'
+gem 'rack-mini-profiler', '~> 1.1', require: false
 # Create local database.yml
 gem 'config', '~> 2.0'
 # Use Active Storage variant
@@ -54,7 +54,7 @@ gem 'meta-tags'
 # Notify Slack
 gem 'slack-notifier', '~> 2.3'
 # Show Action Text Image
-gem 'slim-rails', '~> 3.2'
+# gem 'slim-rails', '~> 3.2'
 # Notify error
 gem 'exception_notification'
 # Add sitemap
@@ -65,11 +65,11 @@ gem 'whenever', require: false
 gem 'gretel'
 
 # Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '>= 1.4.2', require: false
+gem 'bootsnap', '~> 1.4', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'byebug', '11.1', platforms: %i[mri mingw x64_mingw]
   gem 'foreman'
   gem 'mysql2', '>= 0.4.4'
 end

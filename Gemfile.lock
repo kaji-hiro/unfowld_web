@@ -62,7 +62,7 @@ GEM
       activerecord (>= 3.2, < 7.0)
       rake (>= 10.4, < 14.0)
     ast (2.4.0)
-    awesome_print (2.0.0.pre2)
+    awesome_print (1.8.0)
     bcrypt (3.1.13)
     better_errors (2.5.1)
       coderay (>= 1.0.0)
@@ -319,13 +319,6 @@ GEM
     sitemap_generator (6.1.0)
       builder (~> 3.0)
     slack-notifier (2.3.2)
-    slim (4.0.1)
-      temple (>= 0.7.6, < 0.9)
-      tilt (>= 2.0.6, < 2.1)
-    slim-rails (3.2.0)
-      actionpack (>= 3.1)
-      railties (>= 3.1)
-      slim (>= 3.0, < 5.0)
     spring (2.1.0)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
@@ -338,7 +331,6 @@ GEM
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
     squasher (0.6.2)
-    temple (0.8.2)
     thor (1.0.1)
     thread_safe (0.3.6)
     tilt (2.0.10)
@@ -376,14 +368,14 @@ PLATFORMS
 
 DEPENDENCIES
   annotate (~> 3.0)
-  awesome_print (~> 2.0.0.pre2)
-  bcrypt (~> 3.1.7)
+  awesome_print (~> 1.8)
+  bcrypt (~> 3.1)
   better_errors (~> 2.5)
   binding_of_caller (~> 0.8)
-  bootsnap (>= 1.4.2)
+  bootsnap (~> 1.4)
   brakeman (~> 4.6)
   bullet (~> 6.0)
-  byebug
+  byebug (= 11.1)
   capybara (>= 2.15)
   coffee-rails
   config (~> 2.0)
@@ -410,7 +402,6 @@ DEPENDENCIES
   selenium-webdriver
   sitemap_generator
   slack-notifier (~> 2.3)
-  slim-rails (~> 3.2)
   spring
   spring-watcher-listen (~> 2.0.0)
   squasher
