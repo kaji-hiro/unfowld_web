@@ -1,0 +1,67 @@
+// Place all the styles related to the Events controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+@mixin sp {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+@mixin pc {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+.articles {
+  @include pc {
+    padding-top: 100px;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+
+    &-list {
+      width: 60%;
+      border-bottom: solid 1px #000000;
+
+      > a {
+        text-decoration: none;
+      }
+    }
+
+    &-sidebar {
+      width: 20%;
+    }
+  }
+  @include sp {}
+}
+
+.window {
+  text-align: center;
+  border-top: solid 1px #000000;
+  border-left: solid 1px #000000;
+  border-right: solid 1px #000000;
+  padding: 10px;
+
+  :hover {
+    text-decoration: underline;
+  }
+
+  &-thumbnail {
+    width: 90%;
+    height: 90%;
+  }
+
+  &-title {
+    font-size: 30px;
+    color: black;
+    text-align: left;
+    margin-bottom: 15px;
+    margin-left: 5%;
+    text-decoration: none;
+  }
+
+  &-time {
+    text-align: right;
+  }
+}

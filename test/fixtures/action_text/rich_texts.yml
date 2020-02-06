@@ -1,4 +1,4 @@
-# one:
-#   record: name_of_fixture (ClassOfFixture)
-#   name: content
-#   body: <p>In a <i>million</i> stars!</p>
+event_content:
+  record: event_content (Article)
+  name: content
+  body: <p>There is text here</p>

@@ -3,9 +3,9 @@
     User name : <%= @user.name %><br>
     Mail address :<%= @user.email %>
   </i>
-  <section class="micropost_form">
-    <%= render partial: 'microposts/micropost',
-               collection: @microposts,
-               as: 'micropost'%>
+  <section class="article_form">
+    <%= render partial: 'articles/article',
+               collection: @articles,
+               as: 'article'%>
   </section>
 </div>

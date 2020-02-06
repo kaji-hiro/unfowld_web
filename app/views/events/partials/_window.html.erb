@@ -1,0 +1,12 @@
+<%= link_to event_path(event.id), 'text-decoration': 'none' do %>
+  <div class='window'>
+    <%= image_tag event.thumbnail,
+                  class: 'window-thumbnail'%>
+    <div class='window-title'>
+      <%= event.title %>
+    </div>
+    <div class='window-time'>
+      <%= event.created_at.strftime("%Y.%m.%d") %>
+    </div>
+  </div>
+<% end %>

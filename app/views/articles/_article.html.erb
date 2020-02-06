@@ -1,0 +1,9 @@
+<li id="article-<%= article.id %>">
+  <span class="user"><%= link_to article.user.name, article.user %></span>
+  <span class="title"><%= article.title %></span>
+  <span class="thumbnail"><%= image_tag url_for(article.thumbnail.variant(resize_to_limit: [100, 100])) %></span>
+  <span class="content"><%= article.content %></span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(article.created_at) %> ago.
+  </span>
+</li>

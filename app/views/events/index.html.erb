@@ -1,0 +1,11 @@
+<div class='articles'>
+  <div class='articles-list'>
+    <%= render partial: 'events/partials/window',
+              collection: @events,
+              as: 'event' %>
+    <%= paginate @events %>
+  </div>
+  <div class='articles-sidebar'>
+    <%= render partial: 'events/partials/sidebar' %>
+  </div>
+</div>

@@ -3,6 +3,7 @@ AllCops:
     - 'node_modules/**/*'
     - 'vendor/**/*'
     - 'db/schema.rb'
+    - 'db/migrate/*'
     - 'bin/webpack'
     - 'bin/webpack-dev-server'
 
@@ -13,7 +14,7 @@ Layout/HashAlignment:
   EnforcedHashRocketStyle: table
 
 Metrics/LineLength:
-  Max: 120
+  Enabled: false
 
 Style/Documentation:
   Enabled: false
