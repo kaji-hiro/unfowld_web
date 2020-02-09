@@ -63,6 +63,8 @@ gem 'sitemap_generator'
 gem 'whenever', require: false
 # Add breadcrumb
 gem 'gretel'
+# Use GCS
+gem 'google-cloud-storage', '~> 1.8', require: false
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '~> 1.4', require: false
