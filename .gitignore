@@ -87,3 +87,5 @@ yarn-debug.log*
 
 # Ignore Spring files.
 /spring/*.pid
+
+/config/master.key
