@@ -21,7 +21,7 @@ google:
     type: "service_account"
     project_id: "certain-root-267702"
     private_key_id: <%= Rails.application.credentials.private_key_id %>
-    private_key: "<%= Rails.application.credentials.private_key %>"
+    private_key: "<%= Rails.application.credentials.private_key.gsub("\\n", "\n") %>"
     client_email: "unfowld@certain-root-267702.iam.gserviceaccount.com"
     client_id: "108209309754930118501"
     auth_uri: "https://accounts.google.com/o/oauth2/auth"
