@@ -19,7 +19,8 @@ development:
   username: <%= ENV['DB_USERNAME'] || Settings[:db][:username] %>
   password: <%= ENV['DB_PASSWORD'] || Settings[:db][:password] %>
   database: unfowld_web_development
-  socket: /var/lib/mysql/mysql.sock
+  socket: /tmp/mysql.sock
+
 
 
 # Warning: The database defined as "test" will be erased and
