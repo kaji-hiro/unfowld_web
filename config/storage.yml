@@ -20,14 +20,14 @@ google:
   credentials:
     type: "service_account"
     project_id: "certain-root-267702"
-    private_key_id: <%= Rails.application.credentials.private_key_id %>
-    private_key: "<%= Rails.application.credentials.private_key.gsub("\\n", "\n") %>"
-    client_email: "unfowld@certain-root-267702.iam.gserviceaccount.com"
-    client_id: "108209309754930118501"
+    private_key_id: "<%= ENV['PRIVATE_KEY_ID'] %>"
+    private_key: "<%= ENV['PRIVATE_KEY'] %>"
+    client_email: "activestorage@certain-root-267702.iam.gserviceaccount.com"
+    client_id: "111938110100280953670"
     auth_uri: "https://accounts.google.com/o/oauth2/auth"
     token_uri: "https://oauth2.googleapis.com/token"
     auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
-    client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/unfowld%40certain-root-267702.iam.gserviceaccount.com"
+    client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/activestorage%40certain-root-267702.iam.gserviceaccount.com"
   project: "My First Project"
   bucket: "unfowld"
 
