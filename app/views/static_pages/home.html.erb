@@ -1,42 +1,100 @@
 <div class='home'>
   <div class='home-discription'>
-    <%= image_pack_tag 'logo.png', class: 'home-discription-logo', alt: '' %>
+    <%= image_pack_tag 'logo.png', class: 'home-discription-logo', alt: 'Unfowld' %>
     <p>
       Unfowldは、明治大学の1年生によって2018年4月に設立されたファッションサークルです。<br><br>
       60名の明治大学1,2年生によって構成されています。<br><br>
       そのうちアパレル販売員が15名在籍しているのも当サークルの強みです。<br><br>
       「ファッションの敷居を下げる」をテーマに掲げ、多様な活動をしています。<br><br>
-      知識の大小を問わず、服が好きな新入生を募集中。あなたのやりたいこと、Unfowldで一緒にやりましょう。
+      知識の大小を問わず、服が好きな新入生を募集中です。あなたのやりたいこと、Unfowldで一緒にやりましょう。
     </p>
   </div>
+  <!-- about-section-start -->
   <div class='home-about'>
-    <h1>
-      About
-    </h1>
-    <%= image_pack_tag 'testimg.png', class: 'home-discription-logo', alt: '' %>
-    <%= image_pack_tag 'testimg.png', class: 'home-discription-logo', alt: '' %>
-    <%= image_pack_tag 'testimg.png', class: 'home-discription-logo', alt: '' %>
-    <%= image_pack_tag 'testimg.png', class: 'home-discription-logo', alt: '' %>
-  </div>
-  <div class='home-members'>
-    <h1>
-      Members
-    </h1>
-    <div class='home-members-container'>
-      <div class='home-members-container-content'>
-        <%= image_pack_tag 'testimg.png', class: 'home-members-container-content-image', alt: '' %>
-        <a class='home-members-container-content-name'>test name</a>
-        <a class='home-members-container-content-position'>test</a>
-        <a class='home-members-container-content-introduction'>introduction</a>
+    <div class="home-about-inner">
+      <!-- left-side -->
+      <div class="home-about-inner-leftside">
+          <%= image_pack_tag 'home_003.jpg', class: 'home-about-inner-leftside-img01', alt: 'about-img01' %>
+          <%= image_pack_tag 'home_002.jpg', class: 'home-about-inner-leftside-img02', alt: 'about-img02' %>
       </div>
-      <div class='home-members-container-content'>
-        <%= image_pack_tag 'testimg.png', class: 'home-members-container-content-image', alt: '' %>
-      </div>
-      <div class='home-members-container-content'>
-        <%= image_pack_tag 'testimg.png', class: 'home-members-container-content-image', alt: '' %>
+      <div class="home-about-inner-rightside">
+          <div class="home-about-inner-rightside-title">
+            <h2>About</h2>
+          </div>
+          <%= image_pack_tag 'home_004.jpg', class: 'home-about-inner-rightside-img03', alt: 'about-img03' %>
+          <a href="#" class="home-about-inner-rightside-arrow">
+            <%= image_pack_tag 'right-arrow.png', class: 'home-about-inner-rightside-arrow-linkarrow', alt: 'linkarrow' %>
+          </a>
       </div>
     </div>
   </div>
-  <div class='home-events'></div>
-  <div class='home-blog'></div>
+  <!-- about-section-end -->
+  <!-- events-section-start -->
+  <div class="home-events">
+    <h2>Events</h2>
+    <div class="home-events-container">
+      <div class="home-events-container-article">
+        <a href="#" class="home-events-container-article-box">
+          <h3 class="home-events-container-article-box-title">【 grico Fashion Night 】</h3>
+          <p class="home-events-container-article-box-desc">5/31（金）ファッション誌でも大活躍の人気美容室grico（ @gr<br>
+            icoharajuku ）とUnfowldによるコラボイベントを開催いたしまし<br>
+            た。</p>
+          <%= image_pack_tag 'c08945b9f24db48a38fb1f1391f7a7685_43938882_200228_0001.jpg', class: 'home-events-container-article-box-img', alt: 'Events-img01' %>
+          <time class="home-events-container-article-box-date" datetime="2019-00-00">2019.00.00</time>
+        </a>
+      </div>
+      <div class="home-events-container-article">
+        <a href="#" class="home-events-container-article-box">
+          <h3 class="home-events-container-article-box-title">あいうえお</h3>
+          <p class="home-events-container-article-box-desc">あいうえお</p>
+          <%= image_pack_tag 'c08945b9f24db48a38fb1f1391f7a7685_43938882_200228_0001.jpg', class: 'home-events-container-article-box-img', alt: 'Events-img01' %>
+          <time class="home-events-container-article-box-date" datetime="2019-00-00">2019.00.00</time>
+        </a>
+      </div>
+      <div class="home-events-container-article">
+        <a href="#" class="home-events-container-article-box">
+          <h3 class="home-events-container-article-box-title">あいうえお</h3>
+          <p class="home-events-container-article-box-desc">あいうえお</p>
+          <%= image_pack_tag 'c08945b9f24db48a38fb1f1391f7a7685_43938882_200228_0001.jpg', class: 'home-events-container-article-box-img', alt: 'Events-img01' %>
+          <time class="home-events-container-article-box-date" datetime="2019-00-00">2019.00.00</time>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- member-section-start -->
+  <div class="home-member">
+    <h2>Member</h2>
+    <div class="home-member-container">
+      <ul class="home-member-container-list">
+        <li class="home-member-container-list-fadein">
+          <a href="#" class="home-member-container-list-fadein-memberpage">
+            <div class="home-member-container-list-fadein-memberpage-img">
+              <%= image_pack_tag 'Member01.jpg', class: 'home-member-container-list-fadein-memberpage-img-person', alt: 'Member-img01' %>
+            </div>
+            <div class="home-member-container-list-fadein-memberpage-name">
+              <div class="home-member-container-list-fadein-memberpage-name-inner">
+                <p class="home-member-container-list-fadein-memberpage-name-inner-jpn">福田 琉弥</p>
+                <p class="home-member-container-list-fadein-memberpage-name-inner-eng">Fukuda Ryubi</p>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="home-member-container-list-fadein">
+          <a href="#" class="home-member-container-list-fadein-memberpage">
+            <div class="home-member-container-list-fadein-memberpage-img">
+              <%= image_pack_tag 'Member02.png', class: 'home-member-container-list-fadein-memberpage-img-person', alt: 'Member-img02' %>
+            </div>
+            <div class="home-member-container-list-fadein-memberpage-name">
+              <div class="home-member-container-list-fadein-memberpage-name-inner">
+                <p class="home-member-container-list-fadein-memberpage-name-inner-jpn">福田 琉弥</p>
+                <p class="home-member-container-list-fadein-memberpage-name-inner-eng">Fukuda Ryubi</p>
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- member-section-end -->
+
 </div>
