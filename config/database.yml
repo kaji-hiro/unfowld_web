@@ -19,7 +19,6 @@ development:
   username: <%= ENV['DB_USERNAME'] || Settings[:db][:username] %>
   password: <%= ENV['DB_PASSWORD'] || Settings[:db][:password] %>
   database: unfowld_web_development
-  socket: /var/lib/mysql/mysql.sock
 
 
 # Warning: The database defined as "test" will be erased and
@@ -28,7 +27,6 @@ development:
 test:
   <<: *default
   adapter: mysql2
-  host: <%= ENV.fetch("DB_HOST") { 'localhost' } %>
   username: <%= ENV['DB_USERNAME'] || Settings[:db][:username] %>
   password: <%= ENV['DB_PASSWORD'] || Settings[:db][:password] %>
   database: unfowld_web_test
