@@ -190,6 +190,7 @@ body {
   @include pc {
     margin: 300px 100px 0;
     clear: left;
+
     &-links {
       display: flex;
       justify-content: space-between;
@@ -202,8 +203,7 @@ body {
           display: flex;
           flex-direction: row;
           justify-content: space-between;
-          margin: 30px;
-          margin-bottom: 120px;
+          margin: 30px 30px 120px;
           width: 80%;
         }
 
@@ -212,8 +212,7 @@ body {
           flex-direction: row;
           justify-content: space-between;
           width: 40%;
-          margin: 30px;
-          margin-bottom: 60px;
+          margin: 30px 30px 60px;
         }
 
         &-item {
