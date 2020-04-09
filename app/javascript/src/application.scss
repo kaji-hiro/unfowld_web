@@ -20,6 +20,10 @@
 @import 'users.scss';
 @import 'events.scss';
 @import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~sanitize.css';
+// TODO: 以下二つが読み込めない
+// @import '~sanitize.css/forms.css';
+// @import '~sanitize.css/typography.css';
 @mixin sp {
   @media (max-width: 767px) {
     @content;
