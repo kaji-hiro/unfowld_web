@@ -38,13 +38,12 @@
 body {
   margin: 0;
   font-family: 'Lato', sans-serif;
-  font-weight: lighter;
+  font-weight: normal;
 }
 
 .main-header {
   @include pc {
     height: 600px;
-
     &-logo {
       float: left;
       width: 180px;
