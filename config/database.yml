@@ -19,7 +19,6 @@ development:
   username: <%= ENV['DB_USERNAME'] || Settings[:db][:username] %>
   password: <%= ENV['DB_PASSWORD'] || Settings[:db][:password] %>
   database: unfowld_web_development
-  socket: /tmp/mysql.sock
 
 
 

@@ -1,10 +1,11 @@
 <header class="main-header">
   <%= link_to root_path, 'aria-label': 'logo-link' do %>
-    <%= image_pack_tag 'logo.png', class: 'main-header-logo', alt: '' %>
+    <%= image_pack_tag 'logo.png', class: 'main-header-logo', alt: 'Unfowld' %>
   <% end %>
   <input id="nav-input" type="checkbox" class="main-header-unshown">
   <label id="nav-open" for="nav-input" class="main-header-shown"><i class="fas fa-bars"></i></label>
   <label class="main-header-unshown" id="nav-close" for="nav-input"></label>
+
   <div id="nav-content">
     <div class='main-header-contents'>
       <div class="main-header-contents-bottom">
@@ -12,7 +13,7 @@
         <li><%= link_to 'About', static_pages_about_path, class: 'main-header-item' %></li>
         <li><%= link_to 'Members', static_pages_members_path, class: 'main-header-item' %></li>
         <li><%= link_to 'Events', events_index_path, class: 'main-header-item' %></li>
-        <li><%= link_to 'Blog', static_pages_contact_path, class: 'main-header-item' %></li>
+        <li><%= link_to 'Blog', events_index_path, class: 'main-header-item' %></li>
       </div>
       <i class="fas fa-minus fa-rotate-90 main-header-line"></i>
       <div class="main-header-contents-top">

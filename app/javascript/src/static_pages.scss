@@ -6,7 +6,6 @@
     @content;
   }
 }
-
 @mixin pc {
   @media (min-width: 768px) {
     @content;
@@ -45,8 +44,7 @@
           }
         }
 
-        &-body {
-        }
+        &-body {}
       }
     }
 
@@ -61,7 +59,7 @@
       background-repeat: no-repeat;
       background-position: center center;
       background-attachment: fixed;
-      margin-top: -22px;
+      margin-top: 30px;
 
       &-links {
         font-size: 20px;
@@ -77,14 +75,17 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
         &-detail {
           font-size: 12px;
           color: #696969;
         }
+
         input {
           width: 70%;
           height: 20px;
         }
+
         label {
           align-self: center;
         }
@@ -93,19 +94,21 @@
       &-area {
         display: flex;
         justify-content: space-between;
+
         textarea {
           width: 70%;
           height: 200px;
         }
+
         label {
           align-self: center;
         }
       }
 
       &-button {
-        margin: 10px;
-        margin-bottom: 100px;
+        margin: 10px 10px 100px;
         text-align: center;
+
         input {
           width: 30%;
           height: 40px;
@@ -115,6 +118,7 @@
           border: solid 2px #ffffff;
           border-radius: 3px;
         }
+
         :hover {
           background: black;
           color: white;
@@ -122,12 +126,13 @@
       }
     }
   }
-
   @include sp {
     &-title {
       font-size: 25px;
     }
-    &-collectionbox, &-reversecollectionbox {
+
+    &-collectionbox,
+    &-reversecollectionbox {
       display: flex;
       flex-direction: column;
 
@@ -156,6 +161,7 @@
         }
       }
     }
+
     &-contact {
       font-size: 20px;
 
@@ -165,14 +171,17 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
         &-detail {
           font-size: 10px;
           color: #696969;
         }
+
         input {
           width: 70%;
           height: 20px;
         }
+
         label {
           align-self: center;
         }
@@ -181,19 +190,21 @@
       &-area {
         display: flex;
         justify-content: space-between;
+
         textarea {
           width: 70%;
           height: 200px;
         }
+
         label {
           align-self: center;
         }
       }
 
       &-button {
-        margin: 10px;
-        margin-bottom: 100px;
+        margin: 10px 10px 100px;
         text-align: center;
+
         input {
           width: 30%;
           height: 40px;
@@ -203,6 +214,7 @@
           border: solid 2px #ffffff;
           border-radius: 3px;
         }
+
         :hover {
           background: black;
           color: white;
@@ -214,35 +226,243 @@
 
 .home {
   @include pc {
-    margin-left: 10%;
-    margin-right: 10%;
+    margin: 0 5%;
+
     &-discription {
-      margin-top: 150px;
+      margin-top: 130px;
+      font-size: 16px;
+      line-height: 180%;
       text-align: center;
     }
-    &-about {
 
+    p {
+      margin-top: 130px;
     }
-    &-members {
-      &-container {
+    // about-section
+    &-about {
+      position: relative;
+      margin-top: 300px;
+      margin-bottom: 300px;
+      padding-bottom: 100px;
+
+      &-inner {
         display: flex;
+        width: 100%;
+        height: 120%;
+        margin: 0 auto;
+
+        &-leftside {
+          width: 50%;
+          margin-right: 10%;
+
+          &-img01 {
+            width: 92%;
+            height: auto;
+            margin-left: 46px;
+            margin-bottom: 100px;
+            vertical-align: bottom;
+            border: solid 5px #000000;
+          }
+
+          &-img02 {
+            width: 65%;
+            margin-left: 35%;
+            vertical-align: bottom;
+            border: solid 5px #000000;
+          }
+        }
+
+        &-rightside {
+          width: 50%;
+
+          &-title {
+            margin-top: 35%;
+            padding-bottom: 35%;
+          }
+
+          h2 {
+            font-size: 22px;
+            letter-spacing: 3px;
+            font-weight: lighter;
+          }
+
+          &-img03 {
+            width: 80%;
+            height: auto;
+            margin-top: 90px;
+            vertical-align: bottom;
+            border: solid 5px #000000;
+          }
+
+          &-arrow {
+            position: absolute;
+            right: 0;
+            bottom: 4%;
+
+            &-linkarrow {
+              width: 45px;
+              height: 27px;
+            }
+          }
+        }
+      }
+    }
+
+    .home-about-inner::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 110%;
+      height: 73%;
+      top: 28%;
+      bottom: 0;
+      left: -30%;
+      right: 0;
+      z-index: -100;
+      border: solid 3px #000000;
+    }
+    // Events-section
+    &-events {
+      h2 {
+        font-size: 22px;
+        letter-spacing: 3px;
+        font-weight: lighter;
+        text-align: center;
+      }
+
+      &-container {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-justify-content: space-around;
         justify-content: space-around;
-        &-content {
+        margin-top: 200px;
+
+        &-article {
+          position: relative;
+          border: solid 2px #000000;
+
+          &-box {
+            display: block;
+            width: 370px;
+            height: 240px;
+            padding: 220px 0 0;
+            transition: opacity 0.15s;
+            text-decoration: none;
+
+            &-title {
+              margin-top: 30px;
+              color: #000000;
+              font-size: 18px;
+              font-weight: lighter;
+              line-height: 1.6;
+            }
+
+            p {
+              margin-top: 20px;
+            }
+
+            &-desc {
+              color: #000000;
+              font-size: 12px;
+              padding: 0 3px;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+            }
+
+            &-img {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+            }
+
+            &-date {
+              position: absolute;
+              top: 5px;
+              left: 6px;
+              display: block;
+              width: 100px;
+              padding: 4px;
+              background-color: #000000;
+              color: #FFFFFF;
+              letter-spacing: 1px;
+              font-size: 8px;
+            }
+          }
+        }
+      }
+
+      &-button {
+        width: 100%;
+        text-align: center;
+        margin-top: 70px;
+
+        &-link {
+          text-decoration: none;
+          width: 254px;
+          padding: 20px 80px;
+          margin: 0 auto;
+          line-height: 3;
+          font-size: 20px;
+          font-weight: normal;
+          color: #000000;
+          border: solid 2px #000000;
+          cursor: pointer;
+
+          &-more {}
+        }
+      }
+    }
+
+    &-member {
+      h2 {
+        font-size: 22px;
+        letter-spacing: 3px;
+        font-weight: normal;
+        text-align: center;
+        margin: 180px auto;
+      }
+
+      &-container {
+        ul {
+          width: 100%;
+          list-style: none;
+          width: 100%;
           display: flex;
-          flex-direction: column;
-          &-name {
-            text-align: center;
-            font-size: 30px;
-          }
-          &-position {
-            text-align: center;
-            font-size: 20px;
-          }
-          &-introduction {
-            font-size: 20px;
-            border-top: solid 1px black;
-            margin-top: 15px;
-            padding-top: 15px;
+          flex-wrap: wrap;
+          margin-left: -40px;
+          margin-bottom: 0;
+          justify-content: space-around;
+          align-items: center;
+        }
+
+        &-list {
+          &-fadein {
+            &-memberpage {
+              display: block;
+              position: relative;
+
+              &-img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+              }
+
+              &-date {
+                position: absolute;
+                top: 5px;
+                left: 6px;
+                display: block;
+                width: 100px;
+                padding: 4px;
+                background-color: #000000;
+                color: #FFFFFF;
+                letter-spacing: 1px;
+                font-size: 8px;
+              }
+            }
           }
         }
       }
