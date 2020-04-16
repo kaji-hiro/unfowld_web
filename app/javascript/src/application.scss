@@ -44,6 +44,7 @@ body {
 .main-header {
   @include pc {
     height: 600px;
+
     &-logo {
       float: left;
       width: 320px;
