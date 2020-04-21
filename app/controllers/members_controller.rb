@@ -6,6 +6,7 @@ class MembersController < ApplicationController
   end
 
   def create
+    byebug
     member = Member.new(member_params)
     if member.save
       flash.now[:success] = 'Member created!'
@@ -15,9 +16,13 @@ class MembersController < ApplicationController
     end
   end
 
+  def index
+    @members = Member.all
+  end
+
   private
 
     def member_params
-      params.require(:member).permit(:member, :introduction, :order, :image, :position)
+      params.require(:member).permit(:name, :introduction, :order, :position, :image)
     end
 end

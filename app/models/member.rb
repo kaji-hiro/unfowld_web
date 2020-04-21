@@ -15,4 +15,5 @@ class Member < ApplicationRecord
 
   validates :name, presence: true
   validates :introduction, presence: true
+  validates :image, presence: true
 end
