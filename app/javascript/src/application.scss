@@ -61,13 +61,9 @@ a:link, a:visited, a:hover, a:active {
 
 .main-header {
   @include pc {
-<<<<<<< Updated upstream
-    height: 600px;
-=======
     margin: 0 1%;
     height: 52px;
     position: relative;
->>>>>>> Stashed changes
 
     &-logo {
       float: left;
