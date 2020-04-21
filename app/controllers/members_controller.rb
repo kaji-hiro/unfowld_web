@@ -6,7 +6,6 @@ class MembersController < ApplicationController
   end
 
   def create
-    byebug
     member = Member.new(member_params)
     if member.save
       flash.now[:success] = 'Member created!'
