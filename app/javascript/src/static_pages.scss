@@ -12,63 +12,32 @@
   }
 }
 
+<<<<<<< Updated upstream
 .contents {
+=======
+@mixin flex($justify:space-between,$align:center) {
+  display: flex;
+  display: -webkit-flex;//Safari,Android,iOS対応
+  display: -ms-flexbox;//IE対応
+  justify-content: $justify;
+  -webkit-box-pack: $justify;//Safari,Android,iOS対応
+  -ms-flex-pack: $justify;//IE対応
+  align-items: $align;
+  -webkit-box-align: $align;//Safari,Android,iOS対応
+  -ms-flex-align: $align;//IE対応
+}
+
+// variable
+$basecolor: #000;//ベースカラー
+$assortcolor: #fff;//アソートカラー
+$accsentcolor: #dddddd;//アクセントカラー
+
+.contents-wrapper {
+>>>>>>> Stashed changes
   margin: 0;
   @include pc {
-    &-title {
-      font-size: 22px;
-      letter-spacing: 3px;
-      font-weight: normal;
-      text-align: center;
-    }
 
-    &-collectionbox {
-      display: flex;
-      justify-content: space-between;
-
-      &-image {
-        width: 50%;
-        margin: 50px;
-      }
-
-      &-text {
-        margin: 50px;
-        width: 50%;
-
-        &-title {
-          text-align: center;
-          border-bottom: solid 1px #000000;
-          padding-bottom: 15px;
-
-          &-detail {
-            font-weight: lighter;
-            color: gray;
-            font-size: 80%;
-          }
-        }
-
-        &-body {}
-      }
-    }
-
-    &-reversecollectionbox {
-      display: flex;
-      flex-direction: row-reverse;
-    }
-    //ホームページ
-    &-introduction {
-      margin-bottom: 210px;
-
-      &-fadein {
-        margin-top: 0;
-        margin-bottom: 210px;
-
-        &-img01 {
-          width: 80%;
-          height: auto;
-        }
-      }
-
+<<<<<<< Updated upstream
       &-textfield {
         text-align: center;
 
@@ -243,10 +212,39 @@
           cursor: pointer;
 
           &-content {}
+=======
+    .news-section {
+      width: 100%;
+      padding-top: 1%;
+      background-color: $accsentcolor;
+      border-right: solid 2px $basecolor;
+      border-bottom: solid 2px $basecolor;
+      border-left: solid 2px $basecolor;
+      &-inner {
+        margin: 5%;
+        @include flex;
+        &-column {
+          width: 48%;
+          margin-bottom: 16px;
+          &-ttl {
+            font-size: 4rem;
+            font-weight: normal;
+          }
+          &-body {
+            font-size: 1.6rem;
+          }
+        }
+        &-graphic {
+          width: 34%;
+          &-img {
+            width: 100%;
+          }
+>>>>>>> Stashed changes
         }
       }
     }
 
+<<<<<<< Updated upstream
     &-member {
       margin: 10% auto;
       width: 80%;
@@ -354,164 +352,36 @@
           cursor: pointer;
 
           &-content {}
+=======
+    .concept-section {
+      width: 100%;
+      border-right: solid 2px #000;
+      border-bottom: solid 2px #000;
+      border-left: solid 2px #000;
+      &-inner {
+        padding: 4% 8%;
+        @include flex;
+        &-intro {
+          width: 64%;
+          &-ttl {
+            font-size: 4rem;
+            font-weight: normal;
+          }
+          &-body {
+            font-size: 1.6rem;
+            letter-spacing: 1.6px;
+          }
+>>>>>>> Stashed changes
         }
-      }
-    }
-
-    &-contact {
-      font-size: 20px;
-
-      &-field {
-        margin-top: 50px;
-        margin-bottom: 30px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        &-detail {
-          font-size: 12px;
-          color: #696969;
-        }
-
-        input {
-          width: 70%;
-          height: 20px;
-        }
-
-        label {
-          align-self: center;
-        }
-      }
-
-      &-area {
-        display: flex;
-        justify-content: space-between;
-
-        textarea {
-          width: 70%;
-          height: 200px;
-        }
-
-        label {
-          align-self: center;
-        }
-      }
-
-      &-button {
-        margin: 10px 10px 100px;
-        text-align: center;
-
-        input {
-          width: 30%;
-          height: 40px;
-          font-weight: bold;
-          text-decoration: none;
-          background: lightgray;
-          border: solid 2px #ffffff;
-          border-radius: 3px;
-        }
-
-        :hover {
-          background: black;
-          color: white;
-        }
-      }
-    }
-  }
-  @include sp {
-    &-title {
-      font-size: 25px;
-    }
-
-    &-collectionbox,
-    &-reversecollectionbox {
-      display: flex;
-      flex-direction: column;
-
-      &-image {
-        width: 80%;
-        align-self: center;
-      }
-
-      &-text {
-        &-title {
-          text-align: center;
-          border-bottom: solid 1px #000000;
-          padding-bottom: 5px;
-
-          &-detail {
-            font-weight: lighter;
-            color: gray;
-            margin: 5px;
-            font-size: 80%;
+        &-graphic {
+          margin-right: 8%;
+          width: 120px;
+          &-img {
+            width: 100%
           }
         }
-
-        &-body {
-          text-align: left;
-          margin: 5% 10%;
-        }
       }
     }
 
-    &-contact {
-      font-size: 20px;
-
-      &-field {
-        margin-top: 50px;
-        margin-bottom: 30px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        &-detail {
-          font-size: 10px;
-          color: #696969;
-        }
-
-        input {
-          width: 70%;
-          height: 20px;
-        }
-
-        label {
-          align-self: center;
-        }
-      }
-
-      &-area {
-        display: flex;
-        justify-content: space-between;
-
-        textarea {
-          width: 70%;
-          height: 200px;
-        }
-
-        label {
-          align-self: center;
-        }
-      }
-
-      &-button {
-        margin: 10px 10px 100px;
-        text-align: center;
-
-        input {
-          width: 30%;
-          height: 40px;
-          font-weight: bold;
-          text-decoration: none;
-          background: lightgray;
-          border: solid 2px #ffffff;
-          border-radius: 3px;
-        }
-
-        :hover {
-          background: black;
-          color: white;
-        }
-      }
-    }
   }
 }
