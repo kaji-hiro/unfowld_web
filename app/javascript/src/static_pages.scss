@@ -12,9 +12,8 @@
   }
 }
 
-<<<<<<< Updated upstream
 .contents {
-=======
+
 @mixin flex($justify:space-between,$align:center) {
   display: flex;
   display: -webkit-flex;//Safari,Android,iOS対応
@@ -33,11 +32,9 @@ $assortcolor: #fff;//アソートカラー
 $accsentcolor: #dddddd;//アクセントカラー
 
 .contents-wrapper {
->>>>>>> Stashed changes
   margin: 0;
   @include pc {
 
-<<<<<<< Updated upstream
       &-textfield {
         text-align: center;
 
@@ -212,7 +209,7 @@ $accsentcolor: #dddddd;//アクセントカラー
           cursor: pointer;
 
           &-content {}
-=======
+
     .news-section {
       width: 100%;
       padding-top: 1%;
@@ -239,12 +236,12 @@ $accsentcolor: #dddddd;//アクセントカラー
           &-img {
             width: 100%;
           }
->>>>>>> Stashed changes
+
         }
       }
     }
 
-<<<<<<< Updated upstream
+
     &-member {
       margin: 10% auto;
       width: 80%;
@@ -352,7 +349,7 @@ $accsentcolor: #dddddd;//アクセントカラー
           cursor: pointer;
 
           &-content {}
-=======
+
     .concept-section {
       width: 100%;
       border-right: solid 2px #000;
@@ -371,7 +368,7 @@ $accsentcolor: #dddddd;//アクセントカラー
             font-size: 1.6rem;
             letter-spacing: 1.6px;
           }
->>>>>>> Stashed changes
+
         }
         &-graphic {
           margin-right: 8%;
