@@ -21,6 +21,10 @@
 @import 'events.scss';
 @import 'members.scss';
 @import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~sanitize.css';
+// TODO: 以下二つが読み込めない
+// @import '~sanitize.css/forms.css';
+// @import '~sanitize.css/typography.css';
 @mixin sp {
   @media (max-width: 767px) {
     @content;
@@ -32,63 +36,135 @@
   }
 }
 
+// common css //
+
+html {
+  font-size: 62.5%; // 10px
+}
+
 body {
   margin: 0;
-  font-family: 'Lato', sans-serif;
-  font-weight: 300;
+  padding: 0;
+  font-size: 1.2rem; // 12px
+  font-family: 'Helvetica';
 }
+
+h1 {
+  margin: 0;
+}
+
+*, :after, :before {
+  box-sizing: border-box;
+}
+
+a:link, a:visited, a:hover, a:active {
+  color: #000;
+  text-decoration: none;
+}
+
+// css of header
 
 .main-header {
   @include pc {
-    height: 300px;
+    margin: 0 1%;
+    height: 52px;
+    position: relative;
 
     &-logo {
       float: left;
-      height: 100px;
-      padding-top: 100px;
-      padding-left: 70px;
+      height: auto;
+      max-height: 100%;
+      margin-left: 5px;
     }
-
-    &-line,
-    &-shown,
+    &-shown {
+      vertical-align: middle;
+      &-lead {
+        margin: 0 auto;
+      }
+    }
+    //チェックボックス等は非表示に
     &-unshown {
       display: none;
     }
-
-    #nav-content {
+    //アイコンのスペース
+    #nav-open {
+      font-size: 20px;
+      float: right;
+      margin: 1%;
+      text-decoration: underline;
+    }
+    /*閉じる用の薄黒カバー*/
+    #nav-close {
+      display: none;
+      /*はじめは隠しておく*/
+      position: fixed;
+      z-index: 99;
+      top: 0;
+      /*全体に広がるように*/
+      left: 0;
+      width: 100%;
       height: 100%;
+      background: black;
+      opacity: 0;
+      transition: 0.3s ease-in-out;
+    }
+    /*中身*/
+    #nav-content {
+      overflow: auto;
+      position: fixed;
+      border-left: solid 2px #000;
+      top: 0;
+      right: 0;
+      z-index: 9999;
+      /*最前面に*/
+      width: 50%;
+      /*右側に隙間を作る（閉じるカバーを表示）*/
+      max-width: 620px;
+      /*最大幅（調整してください）*/
+      height: 100%;
+      background: #fff;
+      /*背景色*/
+      transition: 0.3s ease-in-out;
+      /*滑らかに表示*/
+      -webkit-transform: translateX(105%);
+      transform: translateX(105%);
+      /*右に隠しておく*/
+    }
+    /*チェックが入ったらもろもろ表示*/
+    #nav-input:checked ~ #nav-close {
+      display: block;
+      /*カバーを表示*/
+      opacity: 0.5;
+    }
+
+    #nav-input:checked ~ #nav-content {
+      -webkit-transform: translateX(0%);
+      transform: translateX(0%);
+      /*中身を表示*/
+      box-shadow: 6px 0 25px rgba(0, 0, 0, .15);
     }
 
     &-contents {
-      height: 100%;
+      padding: 0;
       list-style-type: none;
       font-size: 25px;
-      display: flex;
-      flex-flow: column-reverse;
-      justify-content: space-between;
-      align-items: flex-end;
-      margin-right: 50px;
+      text-align: center;
 
+      &-bottom,
       &-top {
-        margin-top: 30px;
-        display: flex;
-      }
+        text-align: center;
 
-      &-bottom {
-        margin-bottom: 30px;
-        display: flex;
-      }
-
-      > li {
-        margin: 25px 0;
+        li {
+          margin: 24px 0;
+        }
       }
     }
 
     &-item {
       text-decoration: none;
       color: #000000;
-      padding: 20px;
     }
+
   }
   @include sp {
     height: 50px;
@@ -186,60 +262,103 @@ body {
 
 .footer {
   @include pc {
-    margin-top: 100px;
-
-    &-links {
-      display: flex;
-      justify-content: space-between;
-
-      &-list {
-        list-style: none;
-        width: 50%;
-
-        &-top {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          margin: 20px;
-        }
-
-        &-bottom {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          width: 50%;
-          margin: 20px;
-        }
-
-        &-item {
-          color: #000000;
-          text-decoration: none;
-          font-weight: thin;
-          font-size: 25px;
-        }
-      }
-
-      &-sns {
+    &-inner {
+      width: 100%;
+      &-topwrap {
         display: flex;
-        justify-content: space-between;
-        margin: 20px;
-        width: 20%;
-        align-items: center;
-        font-size: 30px;
-        color: #000000;
-
-        a {
-          text-decoration: none;
-          color: black;
-        }
+        height: 400px;
+        background-color: #dddddd;
+      }
+      &-bottomwrap {
+        display: flex;
+        height: 400px;
       }
     }
 
-    &-copyright {
-      margin: 20px;
-      font-size: 5px;
+  .left-contents {
+    width: 37%;
+    height: 100%;
+    border: solid 1px #000;
+    &-graphic {
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+      padding: 16% 8% 1%;
+      vertical-align: middle;
+      &-img {
+        display: block;
+        width: 100%;
+      }
     }
   }
+
+  .right-contents {
+    border: solid 1px #000;
+    width: 63%;
+    padding: 6.4%;
+    &-title {
+      font-size: 2.0rem;
+      font-weight: lighter;
+      font-family: 'sofia';
+    }
+    &-body {
+      font-size: 1.6rem;
+      font-family: 'sofia';
+    }
+  }
+
+  .links-left {
+    width: 56%;
+    border: solid 1px #000;
+    &-box {
+        margin: 5px;
+        width: 18%;
+        align-items: center;
+        font-size: 26px;
+        color: #000000;
+    }
+  }
+
+  .links-middle {
+    padding: 3%;
+    width: 22%;
+    border: solid 1px #000;
+    &-category {
+      &-body {
+        font-size: 2rem;
+      }
+    }
+    &-box {
+      list-style: none;
+      &-item {
+        font-weight: lighter;
+        font-size: 1.8rem;
+        line-height: 1.6;
+      }
+    }
+  }
+
+  .links-right {
+    padding: 3%;
+    width: 22%;
+    border: solid 1px #000;
+    &-category {
+      &-body {
+        font-size: 2rem;
+      }
+    }
+    &-box {
+      list-style: none;
+      &-item {
+        font-weight: lighter;
+        font-size: 1.8rem;
+        line-height: 1.6;
+      }
+    }
+  }
+
+  }
+
   @include sp {
     margin-top: 30px;
 
@@ -277,8 +396,8 @@ body {
         &-item {
           color: #000000;
           text-decoration: none;
-          font-weight: thin;
           font-size: 25px;
+          margin-right: 22px;
         }
       }
 

@@ -1,42 +1,75 @@
-<div class='home'>
-  <div class='home-discription'>
-    <%= image_pack_tag 'logo.png', class: 'home-discription-logo', alt: '' %>
-    <p>
-      Unfowldは、明治大学の1年生によって2018年4月に設立されたファッションサークルです。<br><br>
-      60名の明治大学1,2年生によって構成されています。<br><br>
-      そのうちアパレル販売員が15名在籍しているのも当サークルの強みです。<br><br>
-      「ファッションの敷居を下げる」をテーマに掲げ、多様な活動をしています。<br><br>
-      知識の大小を問わず、服が好きな新入生を募集中。あなたのやりたいこと、Unfowldで一緒にやりましょう。
-    </p>
-  </div>
-  <div class='home-about'>
-    <h1>
-      About
-    </h1>
-    <%= image_pack_tag 'testimg.png', class: 'home-discription-logo', alt: '' %>
-    <%= image_pack_tag 'testimg.png', class: 'home-discription-logo', alt: '' %>
-    <%= image_pack_tag 'testimg.png', class: 'home-discription-logo', alt: '' %>
-    <%= image_pack_tag 'testimg.png', class: 'home-discription-logo', alt: '' %>
-  </div>
-  <div class='home-members'>
-    <h1>
-      Members
-    </h1>
-    <div class='home-members-container'>
-      <div class='home-members-container-content'>
-        <%= image_pack_tag 'testimg.png', class: 'home-members-container-content-image', alt: '' %>
-        <a class='home-members-container-content-name'>test name</a>
-        <a class='home-members-container-content-position'>test</a>
-        <a class='home-members-container-content-introduction'>introduction</a>
+<div class="contents-wrapper">
+  <!-- information section -->
+  <div class="news-section">
+    <div class="news-section-inner">
+      <div class="news-section-inner-column">
+        <h1 class="news-section-inner-column-ttl">Official announcement</h1>
+        <p class="news-section-inner-column-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p class="news-section-inner-column-body">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        <p class="news-section-inner-column-body">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </div>
-      <div class='home-members-container-content'>
-        <%= image_pack_tag 'testimg.png', class: 'home-members-container-content-image', alt: '' %>
-      </div>
-      <div class='home-members-container-content'>
-        <%= image_pack_tag 'testimg.png', class: 'home-members-container-content-image', alt: '' %>
+      <div class="news-section-inner-graphic">
+        <%= image_pack_tag 'home_news01.png', class: 'news-section-inner-graphic-img', alt: 'テキストのイメージ画像' %>
       </div>
     </div>
   </div>
-  <div class='home-events'></div>
-  <div class='home-blog'></div>
+  <!-- concept section -->
+  <div class="concept-section">
+    <div class="concept-section-inner">
+      <div class="concept-section-inner-intro">
+        <h2 class="concept-section-inner-intro-ttl">Unfowld</h2>
+        <p class="concept-section-inner-intro-body">Unfowldは、明治大学の１年生によって２０１８年４月に設立されたファッションサークルです。</p>
+        <p class="concept-section-inner-intro-body">６０名の明治大学1、2年生によって構成されています。</p>
+        <p class="concept-section-inner-intro-body">そのちち、アパレル販売員が１５名在籍しているのも当サークルの強みです。</p>
+        <p class="concept-section-inner-intro-body">「ファッションの敷居を下げる」をテーマに掲げ、多様な活動をしています。</p>
+        <p class="concept-section-inner-intro-body">知識の大小を問わず、服が好きな新入生を募集中です。</p>
+        <p class="concept-section-inner-intro-body">あなたのやりたいこと、Unfowldで一緒にやりましょう。</p>
+      </div>
+    </div>
+  </div>
+  <!-- garellry section -->
+  <div class="collection-box">
+    <div class="collection-box-inner">
+      <div class="single-box">
+        <div class="single-box-fadein">
+          <div class="single-box-fadein-content">
+            <h2 class="single-box-fadein-content-ttl"><a href="#" class="single-box-fadein-content-ttl-link">About</a></h2>
+            <div class="single-box-fadein-content-graphic">
+              <%= image_pack_tag 'home_about02.png', class: 'single-box-fadein-content-graphic-img', alt: 'テキストのイメージ画像' %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="single-box">
+        <div class="single-box-fadein">
+          <div class="single-box-fadein-content">
+            <h2 class="single-box-fadein-content-ttl"><a href="#" class="single-box-fadein-content-ttl-link">Members</a></h2>
+            <div class="single-box-fadein-content-graphic">
+              <%= image_pack_tag 'home_member01.png', class: 'single-box-fadein-content-graphic-img', alt: 'テキストのイメージ画像' %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="single-box">
+        <div class="single-box-fadein">
+          <div class="single-box-fadein-content">
+            <h2 class="single-box-fadein-content-ttl"><a href="#" class="single-box-fadein-content-ttl-link">Events</a></h2>
+            <div class="single-box-fadein-content-graphic">
+              <%= image_pack_tag 'home_events01.png', class: 'single-box-fadein-content-graphic-img', alt: 'テキストのイメージ画像' %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="single-box">
+        <div class="single-box-fadein">
+          <div class="single-box-fadein-content">
+            <h2 class="single-box-fadein-content-ttl"><a href="#" class="single-box-fadein-content-ttl-link">Blog</a></h2>
+            <div class="single-box-fadein-content-graphic">
+              <%= image_pack_tag 'home_blog01.png', class: 'single-box-fadein-content-graphic-img', alt: 'テキストのイメージ画像' %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
