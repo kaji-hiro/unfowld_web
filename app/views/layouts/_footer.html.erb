@@ -1,37 +1,52 @@
 <div class='footer'>
-  <div class='footer-links'>
-    <div class='footer-links-list'>
-      <% if logged_in? %>
-        <%= link_to 'home', root_path, class: 'main-header-item' %>
-        <%= link_to 'user', user_path(current_user.id), class: 'main-header-item' %>
-        <%= link_to 'log_out', logout_path, method: :delete, class: 'main-header-item' %>
-      <% else %>
-        <div class="footer-links-list-top">
-          <li><%= link_to 'Home', root_path, class: 'footer-links-list-item' %></li>
-          <li><%= link_to 'About', static_pages_about_path, class: 'footer-links-list-item' %></li>
-          <li><%= link_to 'Members', static_pages_members_path, class: 'footer-links-list-item' %></li>
-          <li><%= link_to 'Events', events_index_path, class: 'footer-links-list-item' %></li>
-          <li><%= link_to 'Blog', static_pages_contact_path, class: 'footer-links-list-item' %></li>
+  <div class="footer-inner">
+    <div class="footer-inner-topwrap">
+      <div class="left-contents">
+        <div class="left-contents-graphic">
+          <%= image_pack_tag 'no corporationmdpi.png', class: 'left-contents-graphic-img', alt: 'コンセプト画像' %>
         </div>
-        <div class="footer-links-list-bottom">
-          <li><%= link_to 'Contact', static_pages_contact_path, class: 'footer-links-list-item' %></li>
-          <li><%= link_to 'Our Partners', static_pages_contact_path, class: 'footer-links-list-item' %></li>
+      </div>
+      <div class="right-contents">
+        <h1 class="right-contents-title">Unfowld is no corporation.</h1>
+        <p class="right-contents-body">Mainly, MEIJI university students belong to Unfowld.<br>
+        But, from 2020 a variety of students int the world will join Unfowld.</p>
+      </div>
+    </div>
+    <div class="footer-inner-bottomwrap">
+      <div class="links-left">
+        <div class="links-left-box">
+        <%= link_to root_path, 'aria-label': 'icon', target: :_blank do %>
+          <i class="fab fa-twitter"></i>
+        <% end %>
+        <%= link_to root_path, 'aria-label': 'icon', target: :_blank do %>
+          <i class="fab fa-youtube"></i>
+        <% end %>
+        <%= link_to root_path, 'aria-label': 'icon', target: :_blank do %>
+          <i class="fab fa-instagram"></i>
+        <% end %>
         </div>
-      <% end %>
+      </div>
+      <div class="links-middle">
+        <div class="links-middle-category">
+          <p class="links-middle-category-body">CONTENT</p>
+        </div>
+          <div class="links-middle-box">
+            <li><%= link_to 'Home', root_path, class: 'links-middle-box-item' %></li>
+            <li><%= link_to 'About', static_pages_about_path, class: 'links-middle-box-item' %></li>
+            <li><%= link_to 'Members', static_pages_members_path, class: 'links-middle-box-item' %></li>
+            <li><%= link_to 'Events', events_index_path, class: 'links-middle-box-item' %></li>
+            <li><%= link_to 'Blog', static_pages_contact_path, class: 'links-middle-box-item' %></li>
+        </div>
+      </div>
+      <div class="links-right">
+        <div class="links-right-category">
+          <p class="links-right-category-body">INFO</p>
+        </div>
+          <div class="links-right-box">
+            <li><%= link_to 'Contact', static_pages_contact_path, class: 'links-right-box-item' %></li>
+            <li><%= link_to 'Our Partners', static_pages_contact_path, class: 'links-right-box-item' %></li>
+          </div>
+      </div>
     </div>
-    <div class='footer-links-sns'>
-      <%= link_to root_path, 'aria-label': 'icon', target: :_blank do %>
-        <i class="fab fa-twitter"></i>
-      <% end %>
-      <%= link_to root_path, 'aria-label': 'icon', target: :_blank do %>
-        <i class="fab fa-youtube"></i>
-      <% end %>
-      <%= link_to root_path, 'aria-label': 'icon', target: :_blank do %>
-        <i class="fab fa-instagram"></i>
-      <% end %>
-    </div>
-  </div>
-  <div class='footer-copyright'>
-    <p>Copyright © 2019 Unfowld inc. All rights reserved.</p>
   </div>
 </div>

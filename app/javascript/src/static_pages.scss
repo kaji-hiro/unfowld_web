@@ -24,9 +24,25 @@
   -ms-flex-align: $align;//IE対応
 }
 
+@mixin absolute($top:null, $right:null, $bottom:null, $left:null){
+  position: absolute;
+  @if $top != null{
+    top: $top;
+  }
+  @if $right != null{
+    right: $right;
+  }
+  @if $bottom != null{
+    bottom: $bottom;
+  }
+  @if $left != null{
+    left: $left;
+  }
+}
+
 // variable
-$basecolor: #000;//ベースカラー
-$assortcolor: #fff;//アソートカラー
+$basecolor: #fff;//ベースカラー
+$assortcolor: #000;//アソートカラー
 $accsentcolor: #dddddd;//アクセントカラー
 
 .contents-wrapper {
@@ -36,14 +52,115 @@ $accsentcolor: #dddddd;//アクセントカラー
       width: 100%;
       padding-top: 1%;
       background-color: $accsentcolor;
-      border-right: solid 2px $basecolor;
-      border-bottom: solid 2px $basecolor;
-      border-left: solid 2px $basecolor;
+      border-right: solid 2px $assortcolor;
+      border-bottom: solid 2px $assortcolor;
+      border-left: solid 2px $assortcolor;
       &-inner {
         margin: 5%;
         @include flex;
         &-column {
           width: 48%;
+          margin-bottom: 32px;
+          &-ttl {
+            margin-bottom: 30px;
+            font-size: 3.8rem;
+            font-weight: normal;
+          }
+          &-body {
+            font-size: 1.6rem;
+          }
+        }
+        &-graphic {
+          width: 28.4%;
+          &-img {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .concept-section {
+      width: 100%;
+      border-right: solid 2px #000;
+      border-bottom: solid 2px #000;
+      border-left: solid 2px #000;
+      &-inner {
+        padding: 2.2% 8%;
+        @include flex;
+        &-intro {
+          width: 100%;
+          &-ttl {
+            font-size: 3.2rem;
+            font-weight: normal;
+          }
+          &-body {
+            font-size: 2.0rem;
+            font-weight: lighter;
+            letter-spacing: 1.6px;
+          }
+
+        }
+      }
+    }
+
+    .collection-box {
+      width: 100%;
+      &-inner {
+        width: auto;
+        display: flex;
+      }
+    }
+
+    .single-box {
+      width: 72%;
+      height: 100%;
+      border: 1px solid #000;
+      &-fadein {
+        position: relative;
+        padding: 24px;
+        height: auto;
+        transition: 0.15s;
+      &:hover {
+        background-color: $accsentcolor;
+      }
+        &-content {
+          width: 64%;
+          margin: 0 auto;
+          &-ttl {
+              @include absolute($right:0,$left:0,$bottom:28px);
+              margin: 0 auto;
+              font-size: 2.0rem;
+              font-weight: lighter;
+              text-align: center;
+            &-link {
+              display: block;
+            }
+          }
+          &-graphic {
+            width: 100%;
+            margin: 0 auto 32px;
+            &-img {
+              width: 100%;
+              margin: 0 auto;
+            }
+          }
+        }
+      }
+    }
+
+  }
+  @include sp {
+    .news-section {
+      width: 100%;
+      padding-top: 1%;
+      background-color: $accsentcolor;
+      border-right: solid 2px $basecolor;
+      border-bottom: solid 2px $basecolor;
+      border-left: solid 2px $basecolor;
+      &-inner {
+        margin: 5%;
+        &-column {
+          width: 100%;
           margin-bottom: 16px;
           &-ttl {
             font-size: 4rem;
@@ -54,6 +171,7 @@ $accsentcolor: #dddddd;//アクセントカラー
           }
         }
         &-graphic {
+          display: none;
           width: 34%;
           &-img {
             width: 100%;
@@ -69,7 +187,6 @@ $accsentcolor: #dddddd;//アクセントカラー
       border-left: solid 2px #000;
       &-inner {
         padding: 4% 8%;
-        @include flex;
         &-intro {
           width: 64%;
           &-ttl {
@@ -87,6 +204,51 @@ $accsentcolor: #dddddd;//アクセントカラー
           width: 120px;
           &-img {
             width: 100%
+          }
+        }
+      }
+    }
+
+    .collection-box {
+      width: 100%;
+      &-inner {
+        width: auto;
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+
+    .single-box {
+      width: 50%;
+      height: 100%;
+      border: 1px solid #000;
+      &-fadein {
+        position: relative;
+        padding: 24%;
+        transition: 0.15s;
+      &:hover {
+        background-color: $accsentcolor;
+      }
+        &-content {
+          width: 50%;
+          margin: 0 auto;
+          &-ttl {
+              @include absolute($right:0,$left:0,$bottom:16%);
+              margin: 0 auto;
+              font-size: 2.0rem;
+              font-weight: lighter;
+              text-align: center;
+            &-link {
+              display: block;
+            }
+          }
+          &-graphic {
+            width: 72%;
+            margin: 0 auto;
+            &-img {
+              width: 100%;
+              margin: 0 auto;
+            }
           }
         }
       }
