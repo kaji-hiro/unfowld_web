@@ -12,506 +12,247 @@
   }
 }
 
-.contents {
+@mixin flex($justify:space-between,$align:center) {
+  display: flex;
+  display: -webkit-flex;//Safari,Android,iOS対応
+  display: -ms-flexbox;//IE対応
+  justify-content: $justify;
+  -webkit-box-pack: $justify;//Safari,Android,iOS対応
+  -ms-flex-pack: $justify;//IE対応
+  align-items: $align;
+  -webkit-box-align: $align;//Safari,Android,iOS対応
+  -ms-flex-align: $align;//IE対応
+}
+
+@mixin absolute($top:null, $right:null, $bottom:null, $left:null){
+  position: absolute;
+  @if $top != null{
+    top: $top;
+  }
+  @if $right != null{
+    right: $right;
+  }
+  @if $bottom != null{
+    bottom: $bottom;
+  }
+  @if $left != null{
+    left: $left;
+  }
+}
+
+// variable
+$basecolor: #fff;//ベースカラー
+$assortcolor: #000;//アソートカラー
+$accsentcolor: #dddddd;//アクセントカラー
+
+.contents-wrapper {
   margin: 0;
   @include pc {
-    &-title {
-      font-size: 22px;
-      letter-spacing: 3px;
-      font-weight: normal;
-      text-align: center;
-    }
-
-    &-collectionbox {
-      display: flex;
-      justify-content: space-between;
-
-      &-image {
-        width: 50%;
-        margin: 50px;
-      }
-
-      &-text {
-        margin: 50px;
-        width: 50%;
-
-        &-title {
-          text-align: center;
-          border-bottom: solid 1px #000000;
-          padding-bottom: 15px;
-
-          &-detail {
-            font-weight: lighter;
-            color: gray;
-            font-size: 80%;
-          }
-        }
-
-        &-body {}
-      }
-    }
-
-    &-reversecollectionbox {
-      display: flex;
-      flex-direction: row-reverse;
-    }
-    //ホームページ
-    &-introduction {
-      margin-bottom: 210px;
-
-      &-fadein {
-        margin-top: 0;
-        margin-bottom: 210px;
-
-        &-img01 {
-          width: 80%;
-          height: auto;
-        }
-      }
-
-      &-textfield {
-        text-align: center;
-
-        &-text {
-          font-weight: normal;
-          font-size: 23px;
-          line-height: 2.2;
-          letter-spacing: 3px;
-        }
-      }
-    }
-    // aboutセクション
-    &-about {
-      position: relative;
+    .news-section {
       width: 100%;
-      padding-top: 6%;
-      margin-bottom: 15%;
-      padding-bottom: 6%;
-
+      padding-top: 1%;
+      background-color: $accsentcolor;
+      border-right: solid 2px $assortcolor;
+      border-bottom: solid 2px $assortcolor;
+      border-left: solid 2px $assortcolor;
       &-inner {
-        margin: 0 auto;
-        display: flex;
-        width: 80%;
-
-        &::after {
-          content: '';
-          display: block;
-          position: absolute;
-          top: 45%;
-          right: 0;
-          width: 77%;
-          height: 50%;
-          background-color: #000000;
-          z-index: -100;
-        }
-
-        &-leftside {
-          width: 44%;
-          margin-right: 10%;
-
-          &-title {
-            margin-bottom: 35%;
-            padding-top: 31.2%;
-            text-align: right;
-
-            &-text {
-              font-size: 25px;
-              font-weight: lighter;
-              text-decoration: underline;
-            }
+        margin: 5%;
+        @include flex;
+        &-column {
+          width: 48%;
+          margin-bottom: 32px;
+          &-ttl {
+            margin-bottom: 30px;
+            font-size: 3.8rem;
+            font-weight: normal;
           }
-
-          &-downsideimage {
-            padding-top: 0;
-            opacity: 1;
-            transition: all 2.5s;
-            transition-delay: 0.2s;
-
-            &-link {
-              transition: all 0.3s;
-              transition-property: all;
-              transition-duration: 0.3s;
-              cursor: pointer;
-
-              &-img01 {
-                width: 100%;
-                height: auto;
-              }
-            }
+          &-body {
+            font-size: 1.6rem;
           }
         }
-
-        &-rightside {
-          width: 50%;
-
-          &-upsideimage {
-            margin-bottom: 18%;
-
-            &-link {
-              &-img02 {
-                width: 100%;
-                height: auto;
-              }
-            }
-          }
-
-          &-downsideimage {
-            width: 72%;
-            margin-right: 28%;
-
-            &-link {
-              &-img03 {
-                width: 100%;
-                height: auto;
-              }
-            }
+        &-graphic {
+          width: 28.4%;
+          &-img {
+            width: 100%;
           }
         }
       }
     }
-    // eventsセクション
 
-    &-events {
-      margin-bottom: 10%;
+    .concept-section {
       width: 100%;
+      border-right: solid 2px #000;
+      border-bottom: solid 2px #000;
+      border-left: solid 2px #000;
+      &-inner {
+        padding: 2.2% 8%;
+        @include flex;
+        &-intro {
+          width: 100%;
+          &-ttl {
+            font-size: 3.2rem;
+            font-weight: normal;
+          }
+          &-body {
+            font-size: 2.0rem;
+            font-weight: lighter;
+            letter-spacing: 1.6px;
+          }
 
-      &-pickup {
-        margin: 10% auto;
+        }
+      }
+    }
+
+    .collection-box {
+      width: 100%;
+      &-inner {
+        width: auto;
         display: flex;
-        width: 80%;
+      }
+    }
 
-        &-pickupdata {
-          width: 34%;
-
-          &-category {
-            font-size: 18px;
-            margin-top: 0;
-            padding-bottom: 1px;
-            text-decoration: underline;
-          }
-
-          &-title {
-            font-size: 33px;
-            margin-bottom: 42px;
-          }
-
-          &-date {
-            font-size: 14px;
-            letter-spacing: 2.3px;
-          }
-
-          &-excerpt {
-            font-size: 20px;
-            margin-bottom: 50px;
-            width: 86%;
-          }
-
-          &-link {
-            &-entrylink {
-              font-size: 25px;
-              text-decoration: underline;
-              color: #000000;
+    .single-box {
+      width: 72%;
+      height: 100%;
+      border: 1px solid #000;
+      &-fadein {
+        position: relative;
+        padding: 24px;
+        height: auto;
+        transition: 0.15s;
+      &:hover {
+        background-color: $accsentcolor;
+      }
+        &-content {
+          width: 64%;
+          margin: 0 auto;
+          &-ttl {
+              @include absolute($right:0,$left:0,$bottom:28px);
+              margin: 0 auto;
+              font-size: 2.0rem;
+              font-weight: lighter;
+              text-align: center;
+            &-link {
+              display: block;
             }
           }
-        }
-
-        &-pickupimage {
-          width: 67%;
-
-          &-link {
-            display: block;
-
+          &-graphic {
+            width: 100%;
+            margin: 0 auto 32px;
             &-img {
               width: 100%;
+              margin: 0 auto;
             }
           }
         }
       }
-
-      &-button {
-        text-align: center;
-
-        &-link {
-          text-decoration: none;
-          display: block;
-          width: 254px;
-          margin: 0 auto;
-          font-size: 16px;
-          line-height: 3.56;
-          color: #000000;
-          border: solid 2px #000000;
-          cursor: pointer;
-
-          &-content {}
-        }
-      }
     }
 
-    &-member {
-      margin: 10% auto;
-      width: 80%;
-
-      &-title {
-        margin-bottom: 10%;
-
-        &-text {
-          font-size: 25px;
-          font-weight: lighter;
-          text-decoration: underline;
-        }
-      }
-
-      &-list {
-        list-style-type: none;
-        margin-block-start: 0;
-        margin-block-end: 0;
-        padding-inline-start: 0;
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 10%;
-
-        &-fadein {
-          width: 22%;
-
-          &-link {
-            display: block;
-            position: relative;
-            width: 100%;
-
-            &-image {
-              &-img {
-                width: 100%;
-              }
-            }
-
-            &-name {
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              position: absolute;
-              top: 0;
-              right: 0;
-              bottom: 0;
-              left: 0;
-              margin: auto;
-              padding: 0;
-              text-align: center;
-              opacity: 0;
-
-              &:hover {
-                box-sizing: border-box;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                position: absolute;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
-                margin: auto;
-                padding: 0;
-                background-color: rgba(0,0,0,0.5);
-                text-align: center;
-                z-index: 100;
-                opacity: 4;
-                transition: all 0.3s;
-              }
-
-              &-inner {
-                align-items: center;
-                color: #ffffff;
-
-                &-jpn {
-                  margin-bottom: 8px;
-                  font-size: 16px;
-                  color: #fff;
-                }
-
-                &-eng {
-                  margin-bottom: 8px;
-                  font-size: 12px;
-                  color: #fff;
-                  letter-spacing: 1.3px;
-                }
-              }
-            }
-          }
-        }
-      }
-
-      &-button {
-        text-align: center;
-
-        &-link {
-          text-decoration: none;
-          display: block;
-          width: 254px;
-          margin: 0 auto;
-          font-size: 16px;
-          line-height: 3.56;
-          color: #000000;
-          border: solid 2px #000000;
-          cursor: pointer;
-
-          &-content {}
-        }
-      }
-    }
-
-    &-contact {
-      font-size: 20px;
-
-      &-field {
-        margin-top: 50px;
-        margin-bottom: 30px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        &-detail {
-          font-size: 12px;
-          color: #696969;
-        }
-
-        input {
-          width: 70%;
-          height: 20px;
-        }
-
-        label {
-          align-self: center;
-        }
-      }
-
-      &-area {
-        display: flex;
-        justify-content: space-between;
-
-        textarea {
-          width: 70%;
-          height: 200px;
-        }
-
-        label {
-          align-self: center;
-        }
-      }
-
-      &-button {
-        margin: 10px 10px 100px;
-        text-align: center;
-
-        input {
-          width: 30%;
-          height: 40px;
-          font-weight: bold;
-          text-decoration: none;
-          background: lightgray;
-          border: solid 2px #ffffff;
-          border-radius: 3px;
-        }
-
-        :hover {
-          background: black;
-          color: white;
-        }
-      }
-    }
   }
   @include sp {
-    &-title {
-      font-size: 25px;
-    }
-
-    &-collectionbox,
-    &-reversecollectionbox {
-      display: flex;
-      flex-direction: column;
-
-      &-image {
-        width: 80%;
-        align-self: center;
-      }
-
-      &-text {
-        &-title {
-          text-align: center;
-          border-bottom: solid 1px #000000;
-          padding-bottom: 5px;
-
-          &-detail {
-            font-weight: lighter;
-            color: gray;
-            margin: 5px;
-            font-size: 80%;
+    .news-section {
+      width: 100%;
+      padding-top: 1%;
+      background-color: $accsentcolor;
+      border-right: solid 2px $basecolor;
+      border-bottom: solid 2px $basecolor;
+      border-left: solid 2px $basecolor;
+      &-inner {
+        margin: 5%;
+        &-column {
+          width: 100%;
+          margin-bottom: 16px;
+          &-ttl {
+            font-size: 4rem;
+            font-weight: normal;
+          }
+          &-body {
+            font-size: 1.6rem;
           }
         }
-
-        &-body {
-          text-align: left;
-          margin: 5% 10%;
+        &-graphic {
+          display: none;
+          width: 34%;
+          &-img {
+            width: 100%;
+          }
         }
       }
     }
 
-    &-contact {
-      font-size: 20px;
+    .concept-section {
+      width: 100%;
+      border-right: solid 2px #000;
+      border-bottom: solid 2px #000;
+      border-left: solid 2px #000;
+      &-inner {
+        padding: 4% 8%;
+        &-intro {
+          width: 64%;
+          &-ttl {
+            font-size: 4rem;
+            font-weight: normal;
+          }
+          &-body {
+            font-size: 1.6rem;
+            letter-spacing: 1.6px;
+          }
 
-      &-field {
-        margin-top: 50px;
-        margin-bottom: 30px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        &-detail {
-          font-size: 10px;
-          color: #696969;
         }
-
-        input {
-          width: 70%;
-          height: 20px;
-        }
-
-        label {
-          align-self: center;
-        }
-      }
-
-      &-area {
-        display: flex;
-        justify-content: space-between;
-
-        textarea {
-          width: 70%;
-          height: 200px;
-        }
-
-        label {
-          align-self: center;
-        }
-      }
-
-      &-button {
-        margin: 10px 10px 100px;
-        text-align: center;
-
-        input {
-          width: 30%;
-          height: 40px;
-          font-weight: bold;
-          text-decoration: none;
-          background: lightgray;
-          border: solid 2px #ffffff;
-          border-radius: 3px;
-        }
-
-        :hover {
-          background: black;
-          color: white;
+        &-graphic {
+          margin-right: 8%;
+          width: 120px;
+          &-img {
+            width: 100%
+          }
         }
       }
     }
+
+    .collection-box {
+      width: 100%;
+      &-inner {
+        width: auto;
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+
+    .single-box {
+      width: 50%;
+      height: 100%;
+      border: 1px solid #000;
+      &-fadein {
+        position: relative;
+        padding: 24%;
+        transition: 0.15s;
+      &:hover {
+        background-color: $accsentcolor;
+      }
+        &-content {
+          width: 50%;
+          margin: 0 auto;
+          &-ttl {
+              @include absolute($right:0,$left:0,$bottom:16%);
+              margin: 0 auto;
+              font-size: 2.0rem;
+              font-weight: lighter;
+              text-align: center;
+            &-link {
+              display: block;
+            }
+          }
+          &-graphic {
+            width: 72%;
+            margin: 0 auto;
+            &-img {
+              width: 100%;
+              margin: 0 auto;
+            }
+          }
+        }
+      }
+    }
+
   }
 }
