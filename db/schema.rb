@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_20_051732) do
+ActiveRecord::Schema.define(version: 2020_03_31_083952) do
 
   create_table "action_text_rich_texts" do |t|
     t.string "name", null: false
@@ -51,6 +51,15 @@ ActiveRecord::Schema.define(version: 2020_01_20_051732) do
     t.datetime "updated_at", precision: 6, null: false
     t.integer "article_type", null: false
     t.index ["user_id"], name: "index_articles_on_user_id"
+  end
+
+  create_table "members" do |t|
+    t.integer "order"
+    t.string "name"
+    t.string "position"
+    t.string "introduction"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users" do |t|

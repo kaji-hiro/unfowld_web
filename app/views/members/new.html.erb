@@ -1,0 +1,17 @@
+<%= form_with model: @member do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name, class: 'form-control', required: true %>
+
+  <%= form.label :introduction %>
+  <%= form.password_field :introduction, class: 'form-control' %>
+
+  <%= form.label :order %>
+  <%= form.number_field :order, class: 'form-control', required: true %>
+
+  <%= form.label :position %>
+  <%= form.text_field :position, class: 'form-control' %>
+
+  <%= form.file_field :image, class: 'form-control', required: true %>
+
+  <%= form.submit "Create", class: "btn btn-primary" %>
+<% end %>
