@@ -22,7 +22,7 @@
 @import 'members.scss';
 @import '~@fortawesome/fontawesome-free/scss/fontawesome';
 @import '~sanitize.css';
-// TODO: 以下二つが読み込めない
+// todo: 以下二つが読み込めない
 // @import '~sanitize.css/forms.css';
 // @import '~sanitize.css/typography.css';
 @mixin sp {
@@ -45,16 +45,8 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-size: 1.2rem; // 12px
   font-family: 'Helvetica';
-}
-
-h1 {
-  margin: 0;
-}
-
-*, :after, :before {
-  box-sizing: border-box;
+  font-size: 1.0rem;
 }
 
 a:link, a:visited, a:hover, a:active {
@@ -145,17 +137,27 @@ a:link, a:visited, a:hover, a:active {
     }
 
     &-contents {
+      margin: 80px;
       padding: 0;
       list-style-type: none;
-      font-size: 25px;
-      text-align: center;
-
       &-bottom,
       &-top {
-        text-align: center;
-
+        margin-bottom: 60px;
         li {
           margin: 24px 0;
+          font-size: 1.2rem;
+          &:first-child {
+            margin-bottom: 10px;
+            font-size: 1.6rem;
+            font-weight: bold;
+            text-decoration: underline;
+          }
+        }
+      }
+      &-icon {
+        font-size: 1.6rem;
+        .fa-twitter {
+          margin-right: 24px;
         }
       }
     }
@@ -266,7 +268,6 @@ a:link, a:visited, a:hover, a:active {
       width: 100%;
       &-topwrap {
         display: flex;
-        height: 400px;
         background-color: #dddddd;
       }
       &-bottomwrap {
@@ -276,17 +277,13 @@ a:link, a:visited, a:hover, a:active {
     }
 
   .left-contents {
-    width: 37%;
-    height: 100%;
+    width: 24%;
     border: solid 1px #000;
     &-graphic {
       width: 100%;
-      height: 100%;
       margin: 0 auto;
-      padding: 16% 8% 1%;
-      vertical-align: middle;
+      padding: 16%;
       &-img {
-        display: block;
         width: 100%;
       }
     }
@@ -294,16 +291,19 @@ a:link, a:visited, a:hover, a:active {
 
   .right-contents {
     border: solid 1px #000;
-    width: 63%;
-    padding: 6.4%;
+    width: 76%;
+    padding: 5% 3%;
     &-title {
-      font-size: 2.0rem;
+      font-size: 0.8rem;
       font-weight: lighter;
       font-family: 'sofia';
+      letter-spacing: 0.5px;
+      margin-bottom: 16px;
     }
     &-body {
-      font-size: 1.6rem;
-      font-family: 'sofia';
+      font-size: 0.9rem;
+      font-family: 'Helvetica';
+      letter-spacing: 0.8px;
     }
   }
 
@@ -325,14 +325,14 @@ a:link, a:visited, a:hover, a:active {
     border: solid 1px #000;
     &-category {
       &-body {
-        font-size: 2rem;
+        font-size: 1.6rem;
       }
     }
     &-box {
       list-style: none;
       &-item {
         font-weight: lighter;
-        font-size: 1.8rem;
+        font-size: 1.5rem;
         line-height: 1.6;
       }
     }
@@ -344,14 +344,14 @@ a:link, a:visited, a:hover, a:active {
     border: solid 1px #000;
     &-category {
       &-body {
-        font-size: 2rem;
+        font-size: 1.6rem;
       }
     }
     &-box {
       list-style: none;
       &-item {
         font-weight: lighter;
-        font-size: 1.8rem;
+        font-size: 1.5rem;
         line-height: 1.6;
       }
     }
