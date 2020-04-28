@@ -171,7 +171,6 @@ a:link, a:visited, a:hover, a:active {
   @include sp {
     height: 50px;
     position: relative;
-
     &-logo {
       float: left;
       height: auto;
@@ -185,9 +184,10 @@ a:link, a:visited, a:hover, a:active {
     }
     //アイコンのスペース
     #nav-open {
-      font-size: 20px;
+      font-size: 16px;
       float: right;
-      margin: 10px;
+      margin-right: 12px;
+      text-decoration: underline;
     }
     /*閉じる用の薄黒カバー*/
     #nav-close {
@@ -208,11 +208,12 @@ a:link, a:visited, a:hover, a:active {
     #nav-content {
       overflow: auto;
       position: fixed;
+      border-left: solid 2px #000;
       top: 0;
       right: 0;
       z-index: 9999;
       /*最前面に*/
-      width: 50%;
+      width: 66%;
       /*右側に隙間を作る（閉じるカバーを表示）*/
       max-width: 330px;
       /*最大幅（調整してください）*/
@@ -240,17 +241,23 @@ a:link, a:visited, a:hover, a:active {
     }
 
     &-contents {
+      margin: 56px;
       padding: 0;
       list-style-type: none;
       font-size: 25px;
-      text-align: center;
 
       &-bottom,
       &-top {
-        text-align: center;
 
         li {
           margin: 24px 0;
+          font-size: 1.2rem;
+          &:first-child {
+            margin-bottom: 10px;
+            font-size: 1.6rem;
+            font-weight: bold;
+            text-decoration: underline;
+          }
         }
       }
     }
@@ -360,68 +367,104 @@ a:link, a:visited, a:hover, a:active {
   }
 
   @include sp {
-    margin-top: 30px;
-
-    &-links {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-
-      &-list {
-        list-style: none;
-        padding: 0;
-
-        &-top {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          margin: 20px;
-
-          li {
-            margin-top: 7px;
-          }
-        }
-
-        &-bottom {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          margin: 20px;
-
-          li {
-            margin-top: 7px;
-          }
-        }
-
-        &-item {
-          color: #000000;
-          text-decoration: none;
-          font-size: 25px;
-          margin-right: 22px;
-        }
+    &-inner {
+      width: 100%;
+      &-topwrap {
+        background-color: #dddddd;
       }
-
-      &-sns {
+      &-bottomwrap {
         display: flex;
-        justify-content: space-between;
-        align-self: flex-end;
-        margin: 20px;
-        width: 30%;
-        align-items: center;
-        font-size: 30px;
-        color: #000000;
-
-        a {
-          text-decoration: none;
-          color: black;
-        }
+        flex-wrap: wrap;
+        flex-direction: row;
+        height: 500px;
       }
     }
 
-    &-copyright {
-      margin: 20px;
-      font-size: 5px;
+  .left-contents {
+    width: 100%;
+    border: solid 1px #000;
+    &-graphic {
+      width: 100%;
+      margin: 0 auto;
+      padding: 12.5%;
+      &-img {
+        width: 100%;
+      }
     }
+  }
+
+  .right-contents {
+    border: solid 1px #000;
+    width: 100%;
+    padding: 5% 3%;
+    &-title {
+      font-size: 0.8rem;
+      font-weight: lighter;
+      font-family: 'sofia';
+      letter-spacing: 0.5px;
+      margin-bottom: 16px;
+    }
+    &-body {
+      font-size: 0.9rem;
+      font-family: 'Helvetica';
+      letter-spacing: 0.8px;
+    }
+  }
+
+  .links-left {
+    width: 100%;
+    border: solid 1px #000;
+    &-box {
+        margin: 5px;
+        width: 18%;
+        align-items: center;
+        font-size: 26px;
+        color: #000000;
+    }
+  }
+  .active {
+    order: 1;
+    flex: 1 0 100%;
+  }
+
+  .links-middle {
+    padding: 3%;
+    width: 50%;
+    border: solid 1px #000;
+    &-category {
+      &-body {
+        font-size: 1.6rem;
+      }
+    }
+    &-box {
+      list-style: none;
+      &-item {
+        font-weight: lighter;
+        font-size: 1.5rem;
+        line-height: 1.6;
+      }
+    }
+  }
+
+  .links-right {
+    padding: 3%;
+    width: 50%;
+    border: solid 1px #000;
+    &-category {
+      &-body {
+        font-size: 1.6rem;
+      }
+    }
+    &-box {
+      list-style: none;
+      &-item {
+        font-weight: lighter;
+        font-size: 1.5rem;
+        line-height: 1.6;
+      }
+    }
+  }
+
   }
 }
 
