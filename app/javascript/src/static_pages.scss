@@ -40,10 +40,10 @@
   }
 }
 
-// variable
-$basecolor: #fff;//ベースカラー
-$assortcolor: #000;//アソートカラー
+// variable definition
+$basecolor: #000;//ベースカラー
 $accsentcolor: #dddddd;//アクセントカラー
+$main_width: 100%;
 
 // static_pages common css
 .contents-wrapper {
@@ -54,11 +54,17 @@ $accsentcolor: #dddddd;//アクセントカラー
   width: 100%;
 }
 
-// home.html css
-@include pc {
+// individual css
+@include pc { // pc start
   .announce-sec {
+    border: solid 1px $basecolor {
+      top: 0;
+      left: 2px;
+      right: 2px;
+    }
+    background-color: $accsentcolor;
     &-inner {
-      background-color: #dddddd;
+      margin: 0 3%;
       &-spacer {
         height: 180px;
       }
@@ -66,7 +72,7 @@ $accsentcolor: #dddddd;//アクセントカラー
   }
 
   .landscape-container {
-    margin-left: 160px;
+    margin: 0 160px;
     &-column {
       &-ttl {
         h2 {
@@ -75,8 +81,9 @@ $accsentcolor: #dddddd;//アクセントカラー
         }
       }
       &-text {
-        width: 56%;
+        margin: 0;
         p {
+          width: 56%;
           font-size: 1.6rem;
         }
       }
@@ -84,6 +91,7 @@ $accsentcolor: #dddddd;//アクセントカラー
   }
 
   .overview-sec {
+    border: solid 1px $basecolor;
     &-inner {
       @include flex;
       align-items: center;
@@ -97,7 +105,7 @@ $accsentcolor: #dddddd;//アクセントカラー
         p {
           font-family: '游ゴシック';
           font-size: 1.6rem;
-          letter-spacing: 1px;
+          letter-spacing: 1.8px;
         }
       }
       &-graphic {
@@ -119,33 +127,53 @@ $accsentcolor: #dddddd;//アクセントカラー
  }
 
  .single-box {
-   width: 72%;
+   width: (100% / 4);
    height: 100%;
-   border: 1px solid #000;
+   border: 1px solid $basecolor;
    &-fadein {
      position: relative;
-     padding: 24px;
      height: auto;
-     transition: 0.15s;
+     padding: 24px;
+     transition: 0.8s;
    &:hover {
-     background-color: $accsentcolor;
+     background-color: $accsentcolor; // ホバー背景色
    }
      &-content {
-       width: 64%;
+       width: 60%;
        margin: 0 auto;
        &-ttl {
-           @include absolute($right:0,$left:0,$bottom:28px);
+           @include absolute($right:0,$left:0,$bottom:8%);
            margin: 0 auto;
-           font-size: 2.0rem;
-           font-weight: lighter;
+           width: 96px;
+           font-size: 1.5rem;
+           font-weight: normal;
+           letter-spacing: 1px;
            text-align: center;
          &-link {
-           display: block;
+           padding: 0.1em 0.3em;
+           position: relative;
+           display: inline-block;
+           transition: .3s;
+           color: #000;
+         }
+         &:after {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          content: '';
+          width: 0;
+          height: 1px;
+          background-color: #000;
+          transition: .3s;
+         }
+         &:hover:after {
+           width: 100%;
          }
        }
        &-graphic {
          width: 100%;
-         margin: 0 auto 32px;
+         padding: 8%;
+         margin: 0 auto 8%;
          &-img {
            width: 100%;
            margin: 0 auto;
@@ -157,10 +185,10 @@ $accsentcolor: #dddddd;//アクセントカラー
  .intro-sec {
    display: flex;
    width: 100%;
-   border: solid 1px #000;
+   border: solid 1px $basecolor;
    &-photo {
      width: 50%;
-     border: solid 1px #000;
+     border: solid 1px $basecolor;
     &-img {
       width: 100%;
     }
@@ -168,7 +196,7 @@ $accsentcolor: #dddddd;//アクセントカラー
    &-column {
      width: 50%;
      padding: 40px 20px;
-     border: solid 1px #000;
+     border: solid 1px $basecolor;
      &-wrap {
        &-ttl {
          h2 {
@@ -184,15 +212,67 @@ $accsentcolor: #dddddd;//アクセントカラー
      }
    }
  }
+ .person-sec {
+   padding: 100px auto;
+   border-bottom: solid 1px #000;
+   &-inner {
+     margin: 0 5%;
+     &-topwrap,
+     &-bottomwrap {
+       margin: 88px auto;
+       &-ttl {
+         margin: 88px auto;
+         font-size: 2.0rem;
+         h2 {
+           font-weight: normal;
+         }
+       }
+     }
+   }
+ }
+ .member-list {
+   @include flex;
+   flex-wrap: wrap;
+   list-style-type: none;
+   overflow-y: scroll;
+   height: 600px;
+   &::-webkit-scrollbar {
+     width: 2px;
+   }
+   &::-webkit-scrollbar-track {
+     border-radius: 0;
+     background: #ddd;
+   }
+   &::-webkit-scrollbar-thumb {
+     border-radius: 0;
+     background: #000;
+   }
+   &-single {
+     width: 28%;
+     margin: 1%;
+     &-graphic {
+       &-img {
+         width: 100%;
+       }
+     }
+     &-name {
+       text-align: center;
+       font-size: 1.68rem;
+     }
+     &-text {
+       font-size: 1.2rem;
+       letter-spacing: 1px;
+       line-height: 1.68;
+     }
+   }
+ }
+} // pc end
 
-
-}
-
-@include sp {
+@include sp { // sp start
   .announce-sec {
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid $basecolor;
     &-inner {
-      background-color: #dddddd;
+      background-color: $accsentcolor;
       padding: 5px;
       &-spacer {
         height: 160px;
@@ -219,7 +299,7 @@ $accsentcolor: #dddddd;//アクセントカラー
   }
 
   .overview-sec {
-    border: 1px solid #000;
+    border: 1px solid $basecolor;
     &-inner {
       margin: 24px;
       &-intro {
@@ -254,7 +334,7 @@ $accsentcolor: #dddddd;//アクセントカラー
  .single-box {
    width: 50%;
    height: 200px;
-   border: 1px solid #000;
+   border: 1px solid $basecolor;
    &-fadein {
      position: relative;
      padding: 24px;
@@ -288,14 +368,16 @@ $accsentcolor: #dddddd;//アクセントカラー
      }
    }
  }
-
+ // ===== common css without home =====
  .intro-sec {
    display: flex;
    width: 100%;
-   border: solid 1px #000;
+   border: solid 1px $basecolor {
+     bottom: 0;
+   }
    &-photo {
      width: 50%;
-     border: solid 1px #000;
+     border: solid 1px $basecolor;
     &-img {
       width: 100%;
     }
@@ -303,7 +385,7 @@ $accsentcolor: #dddddd;//アクセントカラー
    &-column {
      width: 50%;
      padding: 40px 20px;
-     border: solid 1px #000;
+     border: solid 1px &$basecolor;
      &-wrap {
        &-ttl {
          h2 {
@@ -319,5 +401,6 @@ $accsentcolor: #dddddd;//アクセントカラー
      }
    }
  }
+ // ===== member css =====
 
-}
+} // sp end
