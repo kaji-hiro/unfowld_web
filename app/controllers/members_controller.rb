@@ -29,9 +29,10 @@ class MembersController < ApplicationController
   end
 
   def update
+    member = Member.find(params[:id])
     if member.update(member_params)
       flash.now[:success] = 'Member created!'
-      redirect_to root_url
+      redirect_to members_path
     else
       flash.now[:error] = 'error'
       render :edit
