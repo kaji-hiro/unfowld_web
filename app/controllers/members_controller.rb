@@ -9,19 +9,38 @@ class MembersController < ApplicationController
     member = Member.new(member_params)
     if member.save
       flash.now[:success] = 'Member created!'
-      redirect_to root_url
+      redirect_to new_member_path
     else
       flash.now[:error] = 'error'
+      render :new
     end
   end
 
   def index
-    @members = Member.all
+    @members = if params[:search]
+                 Member.where('name like ?', "%#{params[:search][:name]}%")
+               else
+                 Member.all
+               end
+  end
+
+  def edit
+    @member = Member.find(params[:id])
+  end
+
+  def update
+    if member.update(member_params)
+      flash.now[:success] = 'Member created!'
+      redirect_to root_url
+    else
+      flash.now[:error] = 'error'
+      render :edit
+    end
   end
 
   private
 
     def member_params
-      params.require(:member).permit(:name, :introduction, :order, :position, :image)
+      params.require(:member).permit(:name, :introduction, :order, :position, :image, :instagram)
     end
 end
