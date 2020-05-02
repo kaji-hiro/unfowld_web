@@ -84,8 +84,6 @@ group :development do
   gem 'meta_request'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  # Together migration file
-  gem 'squasher'
 end
 
 group :test do
