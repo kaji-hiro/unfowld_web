@@ -40,219 +40,367 @@
   }
 }
 
-// variable
-$basecolor: #fff;//ベースカラー
-$assortcolor: #000;//アソートカラー
+// variable definition
+$basecolor: #000;//ベースカラー
 $accsentcolor: #dddddd;//アクセントカラー
+$main_width: 100%;
 
+// static_pages common css
 .contents-wrapper {
   margin: 0;
-  @include pc {
-    .news-section {
-      width: 100%;
-      padding-top: 1%;
-      background-color: $accsentcolor;
-      border-right: solid 2px $assortcolor;
-      border-bottom: solid 2px $assortcolor;
-      border-left: solid 2px $assortcolor;
-      &-inner {
-        margin: 5%;
-        @include flex;
-        &-column {
-          width: 48%;
-          margin-bottom: 32px;
-          &-ttl {
-            margin-bottom: 30px;
-            font-size: 3.8rem;
-            font-weight: normal;
-          }
-          &-body {
-            font-size: 1.6rem;
-          }
-        }
-        &-graphic {
-          width: 28.4%;
-          &-img {
-            width: 100%;
-          }
-        }
-      }
-    }
-
-    .concept-section {
-      width: 100%;
-      border-right: solid 2px #000;
-      border-bottom: solid 2px #000;
-      border-left: solid 2px #000;
-      &-inner {
-        padding: 2.2% 8%;
-        @include flex;
-        &-intro {
-          width: 100%;
-          &-ttl {
-            font-size: 3.2rem;
-            font-weight: normal;
-          }
-          &-body {
-            font-size: 2.0rem;
-            font-weight: lighter;
-            letter-spacing: 1.6px;
-          }
-
-        }
-      }
-    }
-
-    .collection-box {
-      width: 100%;
-      &-inner {
-        width: auto;
-        display: flex;
-      }
-    }
-
-    .single-box {
-      width: 72%;
-      height: 100%;
-      border: 1px solid #000;
-      &-fadein {
-        position: relative;
-        padding: 24px;
-        height: auto;
-        transition: 0.15s;
-      &:hover {
-        background-color: $accsentcolor;
-      }
-        &-content {
-          width: 64%;
-          margin: 0 auto;
-          &-ttl {
-              @include absolute($right:0,$left:0,$bottom:28px);
-              margin: 0 auto;
-              font-size: 2.0rem;
-              font-weight: lighter;
-              text-align: center;
-            &-link {
-              display: block;
-            }
-          }
-          &-graphic {
-            width: 100%;
-            margin: 0 auto 32px;
-            &-img {
-              width: 100%;
-              margin: 0 auto;
-            }
-          }
-        }
-      }
-    }
-
-  }
-  @include sp {
-    .news-section {
-      width: 100%;
-      padding-top: 1%;
-      background-color: $accsentcolor;
-      border-right: solid 2px $basecolor;
-      border-bottom: solid 2px $basecolor;
-      border-left: solid 2px $basecolor;
-      &-inner {
-        margin: 5%;
-        &-column {
-          width: 100%;
-          margin-bottom: 16px;
-          &-ttl {
-            font-size: 4rem;
-            font-weight: normal;
-          }
-          &-body {
-            font-size: 1.6rem;
-          }
-        }
-        &-graphic {
-          display: none;
-          width: 34%;
-          &-img {
-            width: 100%;
-          }
-        }
-      }
-    }
-
-    .concept-section {
-      width: 100%;
-      border-right: solid 2px #000;
-      border-bottom: solid 2px #000;
-      border-left: solid 2px #000;
-      &-inner {
-        padding: 4% 8%;
-        &-intro {
-          width: 64%;
-          &-ttl {
-            font-size: 4rem;
-            font-weight: normal;
-          }
-          &-body {
-            font-size: 1.6rem;
-            letter-spacing: 1.6px;
-          }
-
-        }
-        &-graphic {
-          margin-right: 8%;
-          width: 120px;
-          &-img {
-            width: 100%
-          }
-        }
-      }
-    }
-
-    .collection-box {
-      width: 100%;
-      &-inner {
-        width: auto;
-        display: flex;
-        flex-wrap: wrap;
-      }
-    }
-
-    .single-box {
-      width: 50%;
-      height: 100%;
-      border: 1px solid #000;
-      &-fadein {
-        position: relative;
-        padding: 24%;
-        transition: 0.15s;
-      &:hover {
-        background-color: $accsentcolor;
-      }
-        &-content {
-          width: 50%;
-          margin: 0 auto;
-          &-ttl {
-              @include absolute($right:0,$left:0,$bottom:16%);
-              margin: 0 auto;
-              font-size: 2.0rem;
-              font-weight: lighter;
-              text-align: center;
-            &-link {
-              display: block;
-            }
-          }
-          &-graphic {
-            width: 72%;
-            margin: 0 auto;
-            &-img {
-              width: 100%;
-              margin: 0 auto;
-            }
-          }
-        }
-      }
-    }
-
-  }
 }
+
+.contents {
+  width: 100%;
+}
+
+// individual css
+@include pc { // pc start
+  .announce-sec {
+    border: solid 1px $basecolor {
+      top: 0;
+      left: 2px;
+      right: 2px;
+    }
+    background-color: $accsentcolor;
+    &-inner {
+      margin: 0 3%;
+      &-spacer {
+        height: 180px;
+      }
+    }
+  }
+
+  .landscape-container {
+    margin: 0 160px;
+    &-column {
+      &-ttl {
+        h2 {
+          font-size: 4.8rem;
+          font-weight: normal;
+        }
+      }
+      &-text {
+        margin: 0;
+        p {
+          width: 56%;
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+
+  .overview-sec {
+    border: solid 1px $basecolor;
+    &-inner {
+      @include flex;
+      align-items: center;
+      margin: 72px;
+      &-intro {
+        width: 68%;
+        h2 {
+          font-size: 2.8rem;
+          font-weight: lighter;
+        }
+        p {
+          font-family: '游ゴシック';
+          font-size: 1.6rem;
+          letter-spacing: 1.8px;
+        }
+      }
+      &-graphic {
+        margin-right: 24px;
+        width: 24%;
+        &-img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .collection-box {
+   width: 100%;
+   &-inner {
+     width: auto;
+     display: flex;
+   }
+ }
+
+ .single-box {
+   width: (100% / 4);
+   height: 100%;
+   border: 1px solid $basecolor;
+   &-fadein {
+     position: relative;
+     height: auto;
+     padding: 24px;
+     transition: 0.8s;
+   &:hover {
+     background-color: $accsentcolor; // ホバー背景色
+   }
+     &-content {
+       width: 60%;
+       margin: 0 auto;
+       &-ttl {
+           @include absolute($right:0,$left:0,$bottom:8%);
+           margin: 0 auto;
+           width: 96px;
+           font-size: 1.5rem;
+           font-weight: normal;
+           letter-spacing: 1px;
+           text-align: center;
+         &-link {
+           padding: 0.1em 0.3em;
+           position: relative;
+           display: inline-block;
+           transition: .3s;
+           color: #000;
+         }
+         &:after {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          content: '';
+          width: 0;
+          height: 1px;
+          background-color: #000;
+          transition: .3s;
+         }
+         &:hover:after {
+           width: 100%;
+         }
+       }
+       &-graphic {
+         width: 100%;
+         padding: 8%;
+         margin: 0 auto 8%;
+         &-img {
+           width: 100%;
+           margin: 0 auto;
+         }
+       }
+     }
+   }
+ }
+ .intro-sec {
+   display: flex;
+   width: 100%;
+   border: solid 1px $basecolor;
+   &-photo {
+     width: 50%;
+     border: solid 1px $basecolor;
+    &-img {
+      width: 100%;
+    }
+   }
+   &-column {
+     width: 50%;
+     padding: 40px 20px;
+     border: solid 1px $basecolor;
+     &-wrap {
+       &-ttl {
+         h2 {
+         font-size: 2.4rem;
+         font-weight: lighter;
+         }
+       }
+       &-text {
+         p {
+           font-size: 1.2rem;
+         }
+       }
+     }
+   }
+ }
+ .person-sec {
+   padding: 100px auto;
+   border-bottom: solid 1px #000;
+   &-inner {
+     margin: 0 5%;
+     &-topwrap,
+     &-bottomwrap {
+       margin: 88px auto;
+       &-ttl {
+         margin: 88px auto;
+         font-size: 2.0rem;
+         h2 {
+           font-weight: normal;
+         }
+       }
+     }
+   }
+ }
+ .member-list {
+   @include flex;
+   flex-wrap: wrap;
+   list-style-type: none;
+   overflow-y: scroll;
+   height: 600px;
+   &::-webkit-scrollbar {
+     width: 2px;
+   }
+   &::-webkit-scrollbar-track {
+     border-radius: 0;
+     background: #ddd;
+   }
+   &::-webkit-scrollbar-thumb {
+     border-radius: 0;
+     background: #000;
+   }
+   &-single {
+     width: 28%;
+     margin: 1%;
+     &-graphic {
+       &-img {
+         width: 100%;
+       }
+     }
+     &-name {
+       text-align: center;
+       font-size: 1.68rem;
+     }
+     &-text {
+       font-size: 1.2rem;
+       letter-spacing: 1px;
+       line-height: 1.68;
+     }
+   }
+ }
+} // pc end
+
+@include sp { // sp start
+  .announce-sec {
+    border-bottom: 1px solid $basecolor;
+    &-inner {
+      background-color: $accsentcolor;
+      padding: 5px;
+      &-spacer {
+        height: 160px;
+      }
+    }
+  }
+
+  .landscape-container {
+    &-column {
+      padding: 14px;
+      &-ttl {
+        line-height: 1;
+        h2 {
+          font-size: 4.8rem;
+          font-weight: normal;
+        }
+      }
+      &-text {
+        p {
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+
+  .overview-sec {
+    border: 1px solid $basecolor;
+    &-inner {
+      margin: 24px;
+      &-intro {
+        width: 100%;
+        h2  {
+          font-size: 2.8rem;
+          font-weight: lighter;
+        }
+        p {
+          font-family: '游ゴシック';
+          font-size: 1.6rem;
+          letter-spacing: 1px;
+        }
+      }
+      &-graphic {
+        display: none;
+        &-img {
+        }
+      }
+    }
+  }
+
+  .collection-box {
+   width: 100%;
+   &-inner {
+     width: auto;
+     display: flex;
+     flex-wrap: wrap;
+     }
+  }
+
+ .single-box {
+   width: 50%;
+   height: 200px;
+   border: 1px solid $basecolor;
+   &-fadein {
+     position: relative;
+     padding: 24px;
+     height: 100%;
+     transition: 0.15s;
+     &:hover {
+       background-color: $accsentcolor;
+     }
+     &-content {
+       width: 64%;
+       height: auto;
+       margin: 16px auto 0;
+       &-ttl {
+         @include absolute($right:0,$left:0,$bottom:28px);
+         margin: 0 auto;
+         font-size: 1.6rem;
+         font-weight: lighter;
+         text-align: center;
+         &-link {
+           display: block;
+         }
+       }
+       &-graphic {
+         width: 100%;
+         margin: 0 auto 30px;
+         &-img {
+           width: 100%;
+           margin: 0 auto;
+         }
+       }
+     }
+   }
+ }
+ // ===== common css without home =====
+ .intro-sec {
+   display: flex;
+   width: 100%;
+   border: solid 1px $basecolor {
+     bottom: 0;
+   }
+   &-photo {
+     width: 50%;
+     border: solid 1px $basecolor;
+    &-img {
+      width: 100%;
+    }
+   }
+   &-column {
+     width: 50%;
+     padding: 40px 20px;
+     border: solid 1px &$basecolor;
+     &-wrap {
+       &-ttl {
+         h2 {
+         font-size: 2.4rem;
+         font-weight: lighter;
+         }
+       }
+       &-text {
+         p {
+           font-size: 1.2rem;
+         }
+       }
+     }
+   }
+ }
+ // ===== member css =====
+
+} // sp end

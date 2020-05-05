@@ -9,21 +9,30 @@
   <div id="nav-content">
     <div class='main-header-contents'>
       <div class="main-header-contents-bottom">
-        <li><%= link_to 'Home', root_path, class: 'main-header-item' %></li>
-        <li><%= link_to 'About', static_pages_about_path, class: 'main-header-item' %></li>
-        <li><%= link_to 'Members', static_pages_members_path, class: 'main-header-item' %></li>
-        <li><%= link_to 'Events', events_index_path, class: 'main-header-item' %></li>
-        <li><%= link_to 'Blog', events_index_path, class: 'main-header-item' %></li>
+        <li class="main-header-category">CONTENT</li>
+        <li><%= link_to 'HOME', root_path, class: 'main-header-item active' %></li>
+        <li><%= link_to 'ABOUT', static_pages_about_path, class: 'main-header-item' %></li>
+        <li><%= link_to 'MEMBERS', static_pages_members_path, class: 'main-header-item' %></li>
+        <li><%= link_to 'EVENTS', events_index_path, class: 'main-header-item' %></li>
+        <li><%= link_to 'BLOG', events_index_path, class: 'main-header-item' %></li>
       </div>
-      <i class="fas fa-minus fa-rotate-90 main-header-line"></i>
       <div class="main-header-contents-top">
         <% if logged_in? %>
           <%= link_to 'User', user_path(current_user.id), class: 'main-header-item' %>
           <%= link_to 'Article', new_article_path, class: 'main-header-item' %>
           <%= link_to 'Log out', logout_path, method: :delete, class: 'main-header-item' %>
         <% else %>
-          <li><%= link_to 'Contact', static_pages_contact_path, class: 'main-header-item' %></li>
-          <li><%= link_to 'Our Partners', static_pages_contact_path, class: 'main-header-item' %></li>
+          <li class="main-header-category">INFO</li>
+          <li><%= link_to 'CONTACT', static_pages_contact_path, class: 'main-header-item' %></li>
+          <li><%= link_to 'OUR PARTNERS', static_pages_contact_path, class: 'main-header-item' %></li>
+        <% end %>
+      </div>
+      <div class="main-header-contents-icon">
+        <%= link_to 'https://twitter.com/Unfowld_meiji', 'aria-label': 'icon', target: :_blank do %>
+          <i class="fab fa-twitter"></i>
+        <% end %>
+        <%= link_to 'https://www.instagram.com/unfowld/?hl=ja', 'aria-label': 'icon', target: :_blank do %>
+          <i class="fab fa-instagram"></i>
         <% end %>
       </div>
     </div>
