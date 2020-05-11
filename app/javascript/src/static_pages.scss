@@ -28,18 +28,18 @@
   -ms-flex-wrap : $wrap; /*for IE10*/
 }
 
-@mixin absolute($top:null, $right:null, $bottom:null, $left:null){
+@mixin absolute($top:null, $right:null, $bottom:null, $left:null) {
   position: absolute;
-  @if $top != null{
+  @if $top != null {
     top: $top;
   }
-  @if $right != null{
+  @if $right != null {
     right: $right;
   }
-  @if $bottom != null{
+  @if $bottom != null {
     bottom: $bottom;
   }
-  @if $left != null{
+  @if $left != null {
     left: $left;
   }
 }
@@ -175,7 +175,7 @@ $accsentcolor: #dddddd;//アクセントカラー
        }
        &-graphic {
          width: 100%;
-         padding: 8%;
+         padding: 0;
          margin: 0 auto 8%;
          &-img {
            width: 100%;
@@ -269,6 +269,90 @@ $accsentcolor: #dddddd;//アクセントカラー
      }
    }
  }
+ .contact-sec {
+   display: flex;
+   width: 100%;
+   border: solid 2px #000;
+   &-wrap {
+     width: 50%;
+   }
+   &-photo {
+     width: 50%;
+     border-left: solid 1px #000;
+     &-img {
+       width: 100%;
+     }
+   }
+ }
+ .elementer {
+   height: 100%;
+   padding: 4.8%;
+   border-right: solid 1px #000;
+   &-title {
+     font-size: 1.8rem;
+     font-weight: normal;
+     margin-bottom: 32px;
+   }
+   &-contact {
+    padding-right: calc( 13px/2 );
+    padding-left: calc( 13px/2 );
+    margin-bottom: 10px;
+   }
+   &-field {
+     font-size: 1.2rem;
+     font-family: "Sofia Pro", Sans-serif;
+     letter-spacing: 2px;
+     margin-bottom: 32px;
+     &-text {
+       display: inline-block;
+       margin-bottom: 16px;
+       color: #7a7a7a;
+     }
+     &-inputbox {
+       height: 32px;
+       width: 100%;
+       border-width: 1px;
+       border-color: rgba(12,12,12,0.06);
+     }
+   }
+   &-area {
+     font-size: 1.2rem;
+     font-family: "Sofia Pro", Sans-serif;
+     letter-spacing: 2px;
+     margin-bottom: 32px;
+     &-text {
+       display: inline-block;
+       color: #7a7a7a;
+       margin-bottom: 16px;
+     }
+     &-inputbox {
+       height: 300px;
+       width: 100%;
+       border-color: rgba(12,12,12,0.06);
+     }
+   }
+   &-button {
+     margin: 0 auto;
+     &-body {
+       display: inline-block;
+       font-family: "Sofia Pro", Sans-serif;
+       transition: 0.8s;
+       font-size: 1.0rem;
+       font-weight: normal;
+       line-height: 1.6em;
+       letter-spacing: 1.7px;
+       border-style: solid;
+       border-width: 1px;
+       border-color: rgba(12,12,12,0.06);
+       border-radius: 1px;
+       padding: 12px 80px;
+       &:hover {
+         background-color: #000;
+         color: #fff;
+       }
+     }
+   }
+ }
 } // pc end
 
 @include sp { // sp start
@@ -336,7 +420,7 @@ $accsentcolor: #dddddd;//アクセントカラー
 
  .single-box {
    width: 50%;
-   height: 200px;
+   height: 200%;
    border: 1px solid $basecolor;
    &-fadein {
      position: relative;
@@ -450,6 +534,75 @@ $accsentcolor: #dddddd;//アクセントカラー
        font-size: 1.2rem;
        letter-spacing: 1px;
        line-height: 1.68;
+     }
+   }
+ }
+ .elementer {
+   height: 100%;
+   padding: 4.8%;
+   border: solid 2px #000;
+   &-title {
+     font-size: 1.8rem;
+     font-weight: normal;
+     margin-bottom: 32px;
+   }
+   &-contact {
+    padding-right: calc( 13px/2 );
+    padding-left: calc( 13px/2 );
+    margin-bottom: 10px;
+   }
+   &-field {
+     font-size: 1.2rem;
+     font-family: "Sofia Pro", Sans-serif;
+     letter-spacing: 2px;
+     margin-bottom: 32px;
+     &-text {
+       display: inline-block;
+       margin-bottom: 16px;
+       color: #7a7a7a;
+     }
+     &-inputbox {
+       height: 32px;
+       width: 100%;
+       border-width: 1px;
+       border-color: rgba(12,12,12,0.06);
+     }
+   }
+   &-area {
+     font-size: 1.2rem;
+     font-family: "Sofia Pro", Sans-serif;
+     letter-spacing: 2px;
+     margin-bottom: 32px;
+     &-text {
+       display: inline-block;
+       color: #7a7a7a;
+       margin-bottom: 16px;
+     }
+     &-inputbox {
+       height: 300px;
+       width: 100%;
+       border-color: rgba(12,12,12,0.06);
+     }
+   }
+   &-button {
+     margin: 0 auto;
+     &-body {
+       display: inline-block;
+       font-family: "Sofia Pro", Sans-serif;
+       transition: 0.8s;
+       font-size: 1.0rem;
+       font-weight: normal;
+       line-height: 1.6em;
+       letter-spacing: 1.7px;
+       border-style: solid;
+       border-width: 1px;
+       border-color: rgba(12,12,12,0.06);
+       border-radius: 1px;
+       padding: 12px 80px;
+       &:hover {
+         background-color: #000;
+         color: #fff;
+       }
      }
    }
  }

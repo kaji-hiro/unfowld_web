@@ -1,21 +1,26 @@
-<div class='flash-success'><%= flash[:success] %></div>
-<div class='flash-error'><%= flash[:alert] %></div>
-<div class='contents'>
-  <h1 class='title'>Contact</h1>
-  <%= form_with url: static_pages_send_messege_to_slack_path, class: 'contents-contact' do |form| %>
-    <div class='contents-contact-field'>
-      <%= form.label :email, 'Email' %>
-      <!-- <p class='contents-contact-field-detail'> ＊任意 </p> -->
-      <%= form.text_field :email, required: true %>
+  <div class="contact-sec">
+    <div class="contact-sec-wrap">
+      <div class='flash-success'><%= flash[:success] %></div>
+      <div class='flash-error'><%= flash[:alert] %></div>
+      <div class='elementer'>
+        <h1 class='elementer-title'>Contact Unfowld</h1>
+        <%= form_with url: static_pages_send_messege_to_slack_path, class: 'elementer-contact' do |form| %>
+          <div class='elementer-field'>
+            <%= form.label :email, 'EMAIL', class: 'elementer-field-text' %>
+            <!-- <p class='elementer-contact-field-detail'> ＊任意 </p> -->
+            <%= form.text_field :email, required: true, class: 'elementer-field-inputbox' %>
+          </div>
+          <div class='elementer-area'>
+            <%= form.label :message, 'MESSAGE', class: 'elementer-area-text' %>
+            <%= form.text_area :message, required: true, class: 'elementer-area-inputbox' %>
+          </div>
+          <div class='elementer-button'>
+            <%= form.submit 'SEND', class: 'elementer-button-body' %>
+          </div>
+        <% end %>
+      </div>
     </div>
-    <div class='contents-contact-area'>
-      <%= form.label :message %>
-      <%= form.text_area :message, required: true %>
+    <div class="contact-sec-photo">
+      <%= image_pack_tag 'tatemono.jpg', :width => "712", :height => "1080", class: 'contact-sec-photo-img', alt: '建物の画像' %>
     </div>
-    <div class='contents-contact-button'>
-      <%= form.submit '送信', class: 'contents-contact-button' %>
-    </div>
-  <% end %>
-  <% breadcrumb :contact %>
-  <%= breadcrumbs separator: " &rsaquo; " %>
-</div>
+  </div>
