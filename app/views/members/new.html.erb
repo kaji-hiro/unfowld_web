@@ -8,6 +8,9 @@
   <%= form.label :order %>
   <%= form.number_field :order, class: 'form-control', required: true %>
 
+  <%= form.label :category %>
+  <%= form.select :category, [['business', 0], ['creative', 1]], include_blank: true, required: true, class: 'form-control' %>
+
   <%= form.label :instagram %>
   <%= form.text_field :instagram, class: 'form-control' %>
 
