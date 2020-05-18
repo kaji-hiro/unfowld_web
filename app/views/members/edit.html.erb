@@ -1,4 +1,6 @@
 <%= form_with model: @member do |form| %>
+  <%= image_tag @member.image, class: 'member-thumbnail'%>
+
   <%= form.label :name %>
   <%= form.text_field :name, class: 'form-control', required: true %>
 
@@ -7,6 +9,9 @@
 
   <%= form.label :order %>
   <%= form.number_field :order, class: 'form-control', required: true %>
+
+  <%= form.label :category %>
+  <%= form.select :category, [['business', 0], ['creative', 1]], include_blank: true, required: true, class: 'form-control' %>
 
   <%= form.label :instagram %>
   <%= form.text_field :instagram, class: 'form-control' %>

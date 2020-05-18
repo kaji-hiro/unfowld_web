@@ -2,6 +2,11 @@ class MembersController < ApplicationController
   # before_action :basic_auth
 
   def new
+    @members = if params[:search]
+                 Member.where('name like ?', "%#{params[:search][:name]}%")
+               else
+                 Member.all
+               end
     @member = Member.new
   end
 
@@ -42,6 +47,12 @@ class MembersController < ApplicationController
   private
 
     def member_params
-      params.require(:member).permit(:name, :introduction, :order, :position, :image, :instagram)
+      params.require(:member).permit(:name,
+                                     :introduction,
+                                     :order,
+                                     :position,
+                                     :image,
+                                     :instagram,
+                                     :category)
     end
 end
