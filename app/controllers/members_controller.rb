@@ -2,6 +2,11 @@ class MembersController < ApplicationController
   # before_action :basic_auth
 
   def new
+    @members = if params[:search]
+                 Member.where('name like ?', "%#{params[:search][:name]}%")
+               else
+                 Member.all
+               end
     @member = Member.new
   end
 

@@ -21,3 +21,18 @@
 
   <%= form.submit "Create", class: "btn btn-primary" %>
 <% end %>
+
+<h1>Members list</h1>
+<%= form_with scope: 'search', method: :get, local: true do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name, class: 'form-control' %>
+  <%= form.submit "Search", class: "btn btn-primary" %>
+<% end %>
+<% @members.each do |member| %>
+  <%= image_tag member.image, class: 'member-thumbnail'%>
+  <%= member.name %>
+  <%= member.introduction %>
+  <%= member.instagram %>
+  <%= member.position %>
+  <%= link_to '編集', edit_member_path(member.id) %>
+<% end %>
