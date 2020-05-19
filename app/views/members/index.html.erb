@@ -18,13 +18,10 @@
     </div>
     <div class="person-sec">
       <div class="person-sec-inner">
-        <div class="person-sec-inner-topwrap">
-          <div class="person-sec-inner-topwrap-ttl">
-            <h2>Business</h2>
-          </div>
+        <div class="person-sec-inner-wrap">
           <ul class="member-list">
+            <% @members.each do |member| %>
             <li class="member-list-single">
-              <% @members.each do |member| %>
               <div class="member-list-single-graphic">
                 <%= image_tag member.image, class: 'member-list-single-graphic-img'%>
               </div>
@@ -35,26 +32,8 @@
               <div class="member-list-single-text">
                 <%= member.introduction %>
               </div>
-              <% end %>
             </li>
-          </ul>
-        </div>
-        <div class="person-sec-inner-bottomwrap">
-          <div class="person-sec-inner-bottomwrap-ttl">
-            <h2>Creative</h2>
-          </div>
-          <ul class="member-list">
-            <li class="member-list-single">
-              <div class="member-list-single-graphic">
-                <%= image_pack_tag 'member_hiroki.png', class: 'member-list-single-graphic-img', alt: '人物の画像' %>
-              </div>
-              <div class="member-list-single-name">
-                <p>ITO HIROKI</p>
-              </div>
-              <div class="member-list-single-text">
-                <p>明治大学3年 大学入学の2018年4月にUnfowldを創設、現在まで代表を務める。 セレクトショップでの店頭販売経験1年、外資HRスタートアップではセールス/マーケティングに従事。 現在は㈱READY TO FASHION にてアパレル業界の新卒採用に関する幅広い業務を担当している。 毎週金曜日はファッション学生層向けのBARを富士見ヶ丘駅で営業中。カイワレ大根が嫌い。</p>
-              </div>
-            </li>
+            <% end %>
           </ul>
         </div>
       </div>

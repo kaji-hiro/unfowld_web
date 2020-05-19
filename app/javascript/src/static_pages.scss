@@ -233,42 +233,6 @@ $accsentcolor: #dddddd;//アクセントカラー
      }
    }
  }
- .member-list {
-   @include flex;
-   flex-wrap: wrap;
-   list-style-type: none;
-   overflow-y: scroll;
-   height: 600px;
-   &::-webkit-scrollbar {
-     width: 2px;
-   }
-   &::-webkit-scrollbar-track {
-     border-radius: 0;
-     background: #ddd;
-   }
-   &::-webkit-scrollbar-thumb {
-     border-radius: 0;
-     background: #000;
-   }
-   &-single {
-     width: 28%;
-     margin: 1%;
-     &-graphic {
-       &-img {
-         width: 100%;
-       }
-     }
-     &-name {
-       text-align: center;
-       font-size: 1.68rem;
-     }
-     &-text {
-       font-size: 1.2rem;
-       letter-spacing: 1px;
-       line-height: 1.68;
-     }
-   }
- }
  .contact-sec {
    display: flex;
    width: 100%;
