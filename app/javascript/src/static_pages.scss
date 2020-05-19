@@ -6,13 +6,14 @@
     @content;
   }
 }
+
 @mixin pc {
   @media (min-width: 768px) {
     @content;
   }
 }
 
-@mixin flex($justify:space-between,$align:center) {
+@mixin flex($justify:space-between,$align:center,$wrap:wrap) {
   display: flex;
   display: -webkit-flex;//Safari,Android,iOS対応
   display: -ms-flexbox;//IE対応
@@ -22,20 +23,23 @@
   align-items: $align;
   -webkit-box-align: $align;//Safari,Android,iOS対応
   -ms-flex-align: $align;//IE対応
+  flex-wrap : $wrap;
+  -webkit-flex-wrap : $wrap; /*for old webkit browser*/
+  -ms-flex-wrap : $wrap; /*for IE10*/
 }
 
-@mixin absolute($top:null, $right:null, $bottom:null, $left:null){
+@mixin absolute($top:null, $right:null, $bottom:null, $left:null) {
   position: absolute;
-  @if $top != null{
+  @if $top != null {
     top: $top;
   }
-  @if $right != null{
+  @if $right != null {
     right: $right;
   }
-  @if $bottom != null{
+  @if $bottom != null {
     bottom: $bottom;
   }
-  @if $left != null{
+  @if $left != null {
     left: $left;
   }
 }
@@ -43,7 +47,6 @@
 // variable definition
 $basecolor: #000;//ベースカラー
 $accsentcolor: #dddddd;//アクセントカラー
-$main_width: 100%;
 
 // static_pages common css
 .contents-wrapper {
@@ -72,7 +75,8 @@ $main_width: 100%;
   }
 
   .landscape-container {
-    margin: 0 160px;
+    width: 80%;
+    margin: 0 auto;
     &-column {
       &-ttl {
         h2 {
@@ -81,7 +85,6 @@ $main_width: 100%;
         }
       }
       &-text {
-        margin: 0;
         p {
           width: 56%;
           font-size: 1.6rem;
@@ -119,12 +122,12 @@ $main_width: 100%;
   }
 
   .collection-box {
-   width: 100%;
-   &-inner {
-     width: auto;
-     display: flex;
-   }
- }
+    width: 100%;
+    &-inner {
+      width: auto;
+      @include flex;
+    }
+  }
 
  .single-box {
    width: (100% / 4);
@@ -172,7 +175,7 @@ $main_width: 100%;
        }
        &-graphic {
          width: 100%;
-         padding: 8%;
+         padding: 0;
          margin: 0 auto 8%;
          &-img {
            width: 100%;
@@ -230,39 +233,87 @@ $main_width: 100%;
      }
    }
  }
- .member-list {
-   @include flex;
-   flex-wrap: wrap;
-   list-style-type: none;
-   overflow-y: scroll;
-   height: 600px;
-   &::-webkit-scrollbar {
-     width: 2px;
+ .contact-sec {
+   display: flex;
+   width: 100%;
+   border: solid 2px #000;
+   &-wrap {
+     width: 50%;
    }
-   &::-webkit-scrollbar-track {
-     border-radius: 0;
-     background: #ddd;
-   }
-   &::-webkit-scrollbar-thumb {
-     border-radius: 0;
-     background: #000;
-   }
-   &-single {
-     width: 28%;
-     margin: 1%;
-     &-graphic {
-       &-img {
-         width: 100%;
-       }
+   &-photo {
+     width: 50%;
+     border-left: solid 1px #000;
+     &-img {
+       width: 100%;
      }
-     &-name {
-       text-align: center;
-       font-size: 1.68rem;
-     }
+   }
+ }
+ .elementer {
+   height: 100%;
+   padding: 4.8%;
+   border-right: solid 1px #000;
+   &-title {
+     font-size: 1.8rem;
+     font-weight: normal;
+     margin-bottom: 32px;
+   }
+   &-contact {
+    padding-right: calc( 13px/2 );
+    padding-left: calc( 13px/2 );
+    margin-bottom: 10px;
+   }
+   &-field {
+     font-size: 1.2rem;
+     font-family: "Sofia Pro", Sans-serif;
+     letter-spacing: 2px;
+     margin-bottom: 32px;
      &-text {
-       font-size: 1.2rem;
-       letter-spacing: 1px;
-       line-height: 1.68;
+       display: inline-block;
+       margin-bottom: 16px;
+       color: #7a7a7a;
+     }
+     &-inputbox {
+       height: 32px;
+       width: 100%;
+       border-width: 1px;
+       border-color: rgba(12,12,12,0.06);
+     }
+   }
+   &-area {
+     font-size: 1.2rem;
+     font-family: "Sofia Pro", Sans-serif;
+     letter-spacing: 2px;
+     margin-bottom: 32px;
+     &-text {
+       display: inline-block;
+       color: #7a7a7a;
+       margin-bottom: 16px;
+     }
+     &-inputbox {
+       height: 300px;
+       width: 100%;
+       border-color: rgba(12,12,12,0.06);
+     }
+   }
+   &-button {
+     margin: 0 auto;
+     &-body {
+       display: inline-block;
+       font-family: "Sofia Pro", Sans-serif;
+       transition: 0.8s;
+       font-size: 1.0rem;
+       font-weight: normal;
+       line-height: 1.6em;
+       letter-spacing: 1.7px;
+       border-style: solid;
+       border-width: 1px;
+       border-color: rgba(12,12,12,0.06);
+       border-radius: 1px;
+       padding: 12px 80px;
+       &:hover {
+         background-color: #000;
+         color: #fff;
+       }
      }
    }
  }
@@ -301,16 +352,16 @@ $main_width: 100%;
   .overview-sec {
     border: 1px solid $basecolor;
     &-inner {
-      margin: 24px;
+      margin: 32px;
       &-intro {
         width: 100%;
         h2  {
-          font-size: 2.8rem;
+          font-size: 2.4rem;
           font-weight: lighter;
         }
         p {
           font-family: '游ゴシック';
-          font-size: 1.6rem;
+          font-size: 1.2rem;
           letter-spacing: 1px;
         }
       }
@@ -333,18 +384,14 @@ $main_width: 100%;
 
  .single-box {
    width: 50%;
-   height: 200px;
+   height: 200%;
    border: 1px solid $basecolor;
    &-fadein {
      position: relative;
      padding: 24px;
      height: 100%;
-     transition: 0.15s;
-     &:hover {
-       background-color: $accsentcolor;
-     }
      &-content {
-       width: 64%;
+       width: 72%;
        height: auto;
        margin: 16px auto 0;
        &-ttl {
@@ -370,22 +417,20 @@ $main_width: 100%;
  }
  // ===== common css without home =====
  .intro-sec {
-   display: flex;
    width: 100%;
-   border: solid 1px $basecolor {
-     bottom: 0;
-   }
    &-photo {
-     width: 50%;
-     border: solid 1px $basecolor;
+     width: 100%;
     &-img {
       width: 100%;
     }
    }
    &-column {
-     width: 50%;
+     width: 100%;
      padding: 40px 20px;
-     border: solid 1px &$basecolor;
+     border: solid 0.1px $basecolor {
+       right: 0;
+       left: 0;
+     }
      &-wrap {
        &-ttl {
          h2 {
@@ -402,5 +447,127 @@ $main_width: 100%;
    }
  }
  // ===== member css =====
+ .person-sec {
+   padding: 100px auto;
 
+   &-inner {
+     margin: 0 5%;
+     &-topwrap,
+     &-bottomwrap {
+       margin: 88px auto;
+       &-ttl {
+         margin: 88px auto;
+         font-size: 2.0rem;
+         h2 {
+           font-weight: normal;
+         }
+       }
+     }
+   }
+ }
+ .member-list {
+   @include flex;
+   flex-wrap: wrap;
+   list-style-type: none;
+   overflow-y: scroll;
+   height: 600px;
+   &::-webkit-scrollbar {
+     width: 2px;
+   }
+   &::-webkit-scrollbar-track {
+     border-radius: 0;
+     background: #ddd;
+   }
+   &::-webkit-scrollbar-thumb {
+     border-radius: 0;
+     background: #000;
+   }
+   &-single {
+     width: 48%;
+     margin: 1%;
+     &-graphic {
+       &-img {
+         width: 100%;
+       }
+     }
+     &-name {
+       text-align: center;
+       font-size: 1.68rem;
+     }
+     &-text {
+       font-size: 1.2rem;
+       letter-spacing: 1px;
+       line-height: 1.68;
+     }
+   }
+ }
+ .elementer {
+   height: 100%;
+   padding: 4.8%;
+   border: solid 2px #000;
+   &-title {
+     font-size: 1.8rem;
+     font-weight: normal;
+     margin-bottom: 32px;
+   }
+   &-contact {
+    padding-right: calc( 13px/2 );
+    padding-left: calc( 13px/2 );
+    margin-bottom: 10px;
+   }
+   &-field {
+     font-size: 1.2rem;
+     font-family: "Sofia Pro", Sans-serif;
+     letter-spacing: 2px;
+     margin-bottom: 32px;
+     &-text {
+       display: inline-block;
+       margin-bottom: 16px;
+       color: #7a7a7a;
+     }
+     &-inputbox {
+       height: 32px;
+       width: 100%;
+       border-width: 1px;
+       border-color: rgba(12,12,12,0.06);
+     }
+   }
+   &-area {
+     font-size: 1.2rem;
+     font-family: "Sofia Pro", Sans-serif;
+     letter-spacing: 2px;
+     margin-bottom: 32px;
+     &-text {
+       display: inline-block;
+       color: #7a7a7a;
+       margin-bottom: 16px;
+     }
+     &-inputbox {
+       height: 300px;
+       width: 100%;
+       border-color: rgba(12,12,12,0.06);
+     }
+   }
+   &-button {
+     margin: 0 auto;
+     &-body {
+       display: inline-block;
+       font-family: "Sofia Pro", Sans-serif;
+       transition: 0.8s;
+       font-size: 1.0rem;
+       font-weight: normal;
+       line-height: 1.6em;
+       letter-spacing: 1.7px;
+       border-style: solid;
+       border-width: 1px;
+       border-color: rgba(12,12,12,0.06);
+       border-radius: 1px;
+       padding: 12px 80px;
+       &:hover {
+         background-color: #000;
+         color: #fff;
+       }
+     }
+   }
+ }
 } // sp end
