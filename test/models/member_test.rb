@@ -3,6 +3,7 @@
 # Table name: members
 #
 #  id           :bigint           not null, primary key
+#  instagram    :string(255)
 #  introduction :string(255)
 #  name         :string(255)
 #  order        :integer

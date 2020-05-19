@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class='contents-wrapper'>
   <div class="contents">
     <div class="intro-sec">
@@ -40,3 +41,18 @@
     </div>
   </div>
 </div>
+=======
+<h1>Members</h1>
+<%= form_with scope: 'search', method: :get, local: true do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name, class: 'form-control' %>
+  <%= form.submit "Search", class: "btn btn-primary" %>
+<% end %>
+<% @members.each do |member| %>
+  <%= image_tag member.image, class: 'member-thumbnail'%>
+  <%= member.name %>
+  <%= member.introduction %>
+  <%= member.instagram %>
+  <%= member.position %>
+<% end %>
+>>>>>>> develop
