@@ -98,17 +98,18 @@ $accsentcolor: #dddddd;//アクセントカラー
     &-inner {
       @include flex;
       align-items: center;
-      margin: 72px;
+      margin: 5% 12%;
       &-intro {
         width: 68%;
         h2 {
-          font-size: 2.8rem;
+          font-size: 1.8rem;
           font-weight: lighter;
         }
         p {
           font-family: '游ゴシック';
-          font-size: 1.6rem;
-          letter-spacing: 1.8px;
+          font-size: 1.4rem;
+          letter-spacing: 1.0px;
+          line-height: 1.0;
         }
       }
       &-graphic {
@@ -314,6 +315,21 @@ $accsentcolor: #dddddd;//アクセントカラー
          background-color: #000;
          color: #fff;
        }
+     }
+   }
+ }
+ .about-cont {
+   margin: 0 16.8%;
+   &-wrap {
+     padding: 5%;
+     h2 {
+       font-weight: normal;
+       font-size: 1.8rem;
+       margin-bottom: 32px;
+     }
+     p {
+       font-size: 1.6rem;
+       line-height: 2.0;
      }
    }
  }

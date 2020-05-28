@@ -1,13 +1,34 @@
-<h1>Members</h1>
-<%= form_with scope: 'search', method: :get, local: true do |form| %>
-  <%= form.label :name %>
-  <%= form.text_field :name, class: 'form-control' %>
-  <%= form.submit "Search", class: "btn btn-primary" %>
-<% end %>
-<% @members.each do |member| %>
-  <%= image_tag member.image, class: 'member-thumbnail'%>
-  <%= member.name %>
-  <%= member.introduction %>
-  <%= member.instagram %>
-  <%= member.position %>
-<% end %>
+<div class="contents-wrapper">
+  <div class="contents">
+    <div class="intro-sec">
+      <div class="intro-sec-photo">
+        <%= image_pack_tag 'tetora2.png', class: 'intro-sec-photo-img', alt: 'テトラポッドの画像' %>
+      </div>
+      <div class="intro-sec-column">
+        <div class="intro-sec-column-wrap">
+          <div class="intro-sec-column-wrap-ttl">
+            <h2>Members</h2>
+          </div>
+          <div class="intro-sec-column-wrap-text">
+            <p>We're Unfowld. and, this is communities of creatives.</p>
+            <p>We will introduce our members to you.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%= form_with scope: 'search', method: :get, local: true do |form| %>
+      <%= form.label :name %>
+      <%= form.text_field :name, class: 'form-control' %>
+      <%= form.submit "Search", class: "btn btn-primary" %>
+    <% end %>
+    <ul class="member-list">
+      <% @members.each do |member| %>
+        <li><%= image_tag member.image, class: 'member-list-thumbnail' %></li>
+        <li><%= member.name class: 'member-list-name' %></li>
+        <li><%= member.introduction class: 'member-list-introduction' %></li>
+        <li><%= member.instagram class: 'member-list-instagram' %></li>
+        <li><%= member.position class: 'member-list-position' %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
